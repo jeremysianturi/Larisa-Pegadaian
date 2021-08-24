@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:id="@+id/lin_login"
+  android:focusable="true"
+  android:focusableInTouchMode="true"
+    tools:context="id.co.pegadaian.diarium.controller.login.LoginActivity">
+
+    <!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+<!--    <LinearLayout-->
+<!--      android:layout_width="match_parent"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:orientation="vertical">-->
+
+<!--        <ImageView-->
+<!--          android:layout_width="100dp"-->
+<!--          android:layout_height="50dp"-->
+<!--            android:id="@+id/img_test_fr"-->
+<!--            />-->
+
+<!--        <Button-->
+<!--          android:layout_width="wrap_content"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:id="@+id/btn_test"-->
+<!--            android:text="post"/>-->
+
+<!--    </LinearLayout>-->
+    
+<!--    <TextView-->
+<!--        android:id="@+id/tv_welcome_back"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Welcome Back!"-->
+<!--        android:textSize="25dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_margin="8dp">-->
+<!--    </TextView>-->
+
+    <ImageView
+        android:id="@+id/pegadaianlogo_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:src="@drawable/pegadaian_logo">
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/pegadaianbackground_login"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/login_icon">
+    </ImageView>
+
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_nikfield"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_transparent"
+                android:padding="2dp"
+                android:textColorHint="#fff"
+                app:endIconDrawable="@drawable/ic_check_login"
+                app:endIconTint="@color/green_pegadaian_color"
+                app:endIconMode="custom"
+                app:errorEnabled="true"
+                app:errorIconDrawable="@drawable/ic_check_login_grey"
+                app:startIconDrawable="@drawable/ic_mail">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="NIK"
+                    android:inputType="text"
+                    android:textColor="@color/green_pegadaian_color"
+                    android:textColorHighlight="#fff"
+                    android:textColorHint="#fff"
+                    android:textSize="14sp"
+                    android:imeOptions="actionDone"/>
+            </com.google.android.material.textfield.TextInputLayout>
+<!--            android:drawableLeft="@drawable/ic_mail"-->
+<!--            android:drawableRight="@drawable/ic_check_login_grey"-->
+<!--            android:drawablePadding="4dp"-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/et_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#fff"
+                android:background="@drawable/button_transparent"
+                android:padding="2dp"
+                android:layout_margin="5dp"
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@drawable/ic_lockpass"
+                app:passwordToggleTint="@color/green_pegadaian_color">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:inputType="textPassword"
+                    android:textColor="@color/green_pegadaian_color"
+                    android:textColorHighlight="#fff"
+                    android:textColorHint="#fff"
+                    android:textSize="14sp"
+                    android:imeOptions="actionDone"
+                     />
+<!--                android:drawableLeft="@drawable/ic_lockpass"-->
+<!--                android:drawablePadding="4dp"-->
+<!--                android:drawableRight="@drawable/ic_smalleye"-->
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/email_sign_in_button"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button"
+                android:text="Login"
+                android:textColor="#FFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="forgot password"
+                android:textColor="@color/green_pegadaian_color"
+                android:gravity="right"
+                android:layout_margin="5dp"
+                android:visibility="gone">
+            </TextView>
+
+            <ImageView
+              android:visibility="invisible"
+              android:id="@+id/img_fingerprint"
+              android:layout_width="60dp"
+              android:layout_height="60dp"
+              android:layout_marginTop="20dp"
+              android:background="@drawable/bg_fingerprint_red"
+              android:padding="14dp"
+              app:srcCompat="@drawable/ic_fingerprint" />
+
+            <TextView
+                android:id="@+id/tv_version_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey"
+                android:gravity="center">
+            </TextView>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

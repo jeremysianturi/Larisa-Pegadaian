@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.home.main_menu.personal_data.personaldata.PersonalDataOnly">
+
+    <TextView
+        android:id="@+id/tv_title_personal_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Personal Data"
+        android:padding="15dp"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:background="@color/green_pegadaian_color"
+        android:visibility="gone"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rv_data_personal_detail"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+<!--    <id.co.pegadaian.diarium.util.NonScrollListView-->
+<!--        android:id="@+id/lv_data_personal_detail"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:background="@drawable/bg_edittext"-->
+<!--        android:padding="5dp"-->
+<!--        android:layout_margin="4dp"-->
+
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_title_personal_data"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent">-->
+<!--    </id.co.pegadaian.diarium.util.NonScrollListView>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_data_personal_detail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:layout_margin="4dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_personal_data"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

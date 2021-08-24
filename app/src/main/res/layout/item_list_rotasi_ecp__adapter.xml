@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:card_view="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <androidx.cardview.widget.CardView
+    android:id="@+id/promosicard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="3dp"
+    card_view:cardElevation="4dp"
+    card_view:cardUseCompatPadding="true"
+    tools:ignore="InefficientWeight">
+
+    <LinearLayout
+      android:padding="5dp"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+          android:id="@+id/number"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingBottom="3dp"
+          android:background="@drawable/border_bottom"
+          android:text="1."/>
+
+
+        <TextView
+        android:id="@+id/tittle"
+        android:paddingBottom="3dp"
+        android:textSize="@dimen/text_14sp_ecp"
+        android:gravity="center"
+        android:text="Staf Div Manj. Strategis SDM Jr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom"/>
+      </LinearLayout>
+
+      <LinearLayout
+        android:paddingTop="2dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+          android:orientation="horizontal"
+          android:layout_weight="1.5"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <TextView
+            android:id="@+id/aplicans"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left"
+            android:text="Aplicants"
+            android:textSize="12sp" />
+
+        </LinearLayout>
+        <LinearLayout
+          android:layout_weight="0.7"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <TextView
+            android:textSize="12sp"
+            android:id="@+id/isi_aplicans"
+            android:text="0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+
+      <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+          android:layout_weight="1.5"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <TextView
+            android:textSize="12sp"
+            android:gravity="left"
+            android:id="@+id/rank"
+            android:text="Number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        <LinearLayout
+          android:layout_weight="0.7"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <TextView
+            android:textSize="12sp"
+            android:id="@+id/isi_rank"
+            android:text="0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+          android:layout_weight="1.5"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+          <TextView
+            android:textSize="12sp"
+            android:gravity="left"
+            android:id="@+id/score"
+            android:text="Score"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        <LinearLayout
+          android:layout_weight="0.7"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <TextView
+            android:textSize="12sp"
+            android:id="@+id/isi_score"
+            android:text="0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+
+<!--      <LinearLayout-->
+<!--        android:orientation="horizontal"-->
+<!--        android:weightSum="2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        <LinearLayout-->
+<!--          android:layout_weight="1.5"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="match_parent">-->
+<!--          <TextView-->
+<!--            android:textSize="@dimen/text_14sp_ecp"-->
+<!--            android:gravity="left"-->
+<!--            android:id="@+id/band"-->
+<!--            android:text="Band"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"/>-->
+
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--          android:layout_weight="0.7"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="match_parent">-->
+
+<!--          <TextView-->
+<!--            android:textSize="@dimen/text_14sp_ecp"-->
+<!--            android:gravity="center"-->
+<!--            android:id="@+id/isi_band"-->
+<!--            android:text="0"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"/>-->
+
+<!--        </LinearLayout>-->
+
+<!--      </LinearLayout>-->
+
+
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+</LinearLayout>

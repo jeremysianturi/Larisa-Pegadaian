@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="Gradle: com.qiscus.utils:manggil:1.0.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1aba442d6b88fa19aacc6105cc17ca8b/jetified-manggil-1.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1aba442d6b88fa19aacc6105cc17ca8b/jetified-manggil-1.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1aba442d6b88fa19aacc6105cc17ca8b/jetified-manggil-1.0.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ecf45ee927234d51c3575dbca837379/jetified-manggil-1.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ecf45ee927234d51c3575dbca837379/jetified-manggil-1.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ecf45ee927234d51c3575dbca837379/jetified-manggil-1.0.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/408dcb4e4eafff754364a7228f007424/jetified-manggil-1.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/408dcb4e4eafff754364a7228f007424/jetified-manggil-1.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/408dcb4e4eafff754364a7228f007424/jetified-manggil-1.0.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.qiscus.utils/manggil/1.0.1/5f36305f6d807d6e284314d9eabf9e903f22ebc6/manggil-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.home.main_menu.personal_data.familydata.AddFamilyMember">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title_familytype"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Select family type"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/spinner_family_type">
+        </TextView>
+
+        <TextView
+            android:id="@+id/spinner_family_type"
+            style="@style/textview_dropdown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_familytype"
+            app:layout_constraintBottom_toTopOf="@id/tv_title_familynumber">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_title_familynumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Input family number"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_family_type"
+            app:layout_constraintBottom_toTopOf="@id/et_familynumber">
+        </TextView>
+
+        <EditText
+            android:id="@+id/et_familynumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_white"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+            android:inputType="number"
+            android:maxLength="2"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_familynumber"
+            app:layout_constraintBottom_toTopOf="@id/tv_title_name">
+        </EditText>
+
+        <TextView
+            android:id="@+id/tv_title_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_familynumber"
+            app:layout_constraintBottom_toTopOf="@id/et_familyname">
+        </TextView>
+
+        <EditText
+            android:id="@+id/et_familyname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_white"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_name"
+            app:layout_constraintBottom_toTopOf="@id/tv_title_nickname">
+        </EditText>
+
+        <TextView
+            android:id="@+id/tv_title_nickname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Nickname"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_familyname"
+            app:layout_constraintBottom_toTopOf="@id/et_familynickname">
+        </TextView>
+
+        <EditText
+            android:id="@+id/et_familynickname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_white"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_nickname"
+            app:layout_constraintBottom_toTopOf="@id/tv_title_birthplace">
+        </EditText>
+
+        <TextView
+            android:id="@+id/tv_title_birthplace"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Birth place"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_familynickname"
+            app:layout_constraintBottom_toTopOf="@id/et_family_birthplace">
+        </TextView>
+
+        <EditText
+            android:id="@+id/et_family_birthplace"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_white"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_birthplace"
+            app:layout_constraintBottom_toTopOf="@id/ll_date_addfam_member">
+        </EditText>
+
+        <LinearLayout
+            android:id="@+id/ll_date_addfam_member"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="8dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_family_birthplace"
+            app:layout_constraintBottom_toTopOf="@id/tv_title_gender">
+
+            <TextView
+                android:id="@+id/tv_title_birthdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select birthdate"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_margin="4dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="8dp"
+                android:background="@drawable/border_rectangle">
+
+                <TextView
+                    android:id="@+id/tv_pc_birthdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center_vertical">
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/iv_datepicker_birthdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_datepicker"
+                    android:layout_weight="0.8">
+                </ImageView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_gender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Select family gender"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_date_addfam_member"
+            app:layout_constraintBottom_toTopOf="@id/spinner_family_gender">
+        </TextView>
+
+        <TextView
+            android:id="@+id/spinner_family_gender"
+            style="@style/textview_dropdown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_gender"
+            app:layout_constraintBottom_toTopOf="@id/tv_title_religion">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_title_religion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Select family religion"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_family_gender"
+            app:layout_constraintBottom_toTopOf="@id/spinner_family_religion">
+        </TextView>
+
+        <TextView
+            android:id="@+id/spinner_family_religion"
+            style="@style/textview_dropdown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_religion"
+            app:layout_constraintBottom_toTopOf="@id/tv_title_familystatus">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_title_familystatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Select family status"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_family_religion"
+            app:layout_constraintBottom_toTopOf="@id/spinner_familystatus">
+        </TextView>
+
+        <TextView
+            android:id="@+id/spinner_familystatus"
+            style="@style/textview_dropdown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_familystatus"
+            app:layout_constraintBottom_toTopOf="@id/ll_date_family_status_date">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/ll_date_family_status_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="8dp"
+            android:visibility="gone"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_familystatus"
+            app:layout_constraintBottom_toTopOf="@id/tv_title_jobtitle">
+
+            <TextView
+                android:id="@+id/tv_title_date_familystatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Input date of Death"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_margin="4dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="8dp"
+                android:background="@drawable/border_rectangle">
+
+                <TextView
+                    android:id="@+id/tv_pc_date_familystatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center_vertical">
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/iv_datepicker_date_familystatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_datepicker"
+                    android:layout_weight="0.8">
+                </ImageView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_jobtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Job title"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_date_family_status_date"
+            app:layout_constraintBottom_toTopOf="@id/et_family_jobtitle">
+        </TextView>
+
+        <EditText
+            android:id="@+id/et_family_jobtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_white"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_jobtitle"
+            app:layout_constraintBottom_toTopOf="@id/tv_title_jobcompany">
+        </EditText>
+
+        <TextView
+            android:id="@+id/tv_title_jobcompany"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Company name"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_family_jobtitle"
+            app:layout_constraintBottom_toTopOf="@id/et_family_jobcompany">
+        </TextView>
+
+        <EditText
+            android:id="@+id/et_family_jobcompany"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_white"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_jobcompany"
+            app:layout_constraintBottom_toTopOf="@id/tv_title_marital_status">
+        </EditText>
+
+        <TextView
+            android:id="@+id/tv_title_marital_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Select family marital status"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_family_jobcompany"
+            app:layout_constraintBottom_toTopOf="@id/spinner_marital_status">
+        </TextView>
+
+        <TextView
+            android:id="@+id/spinner_marital_status"
+            style="@style/textview_dropdown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_marital_status"
+            app:layout_constraintBottom_toTopOf="@id/ll_date_marital">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/ll_date_marital"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="8dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_marital_status"
+            app:layout_constraintBottom_toTopOf="@id/btn_submit_add_familymember">
+
+            <TextView
+                android:id="@+id/tv_title_maritaldate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select marital date"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_margin="4dp"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="8dp"
+                android:background="@drawable/border_rectangle">
+
+                <TextView
+                    android:id="@+id/tv_pc_date_marital"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:gravity="center_vertical">
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/iv_datepicker_marital"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_datepicker"
+                    android:layout_weight="0.8">
+                </ImageView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_submit_add_familymember"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/button"
+            android:layout_margin="14dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_date_marital"
+            app:layout_constraintBottom_toBottomOf="parent">
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

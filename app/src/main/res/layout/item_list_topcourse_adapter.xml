@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:card_view="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:orientation="vertical"
+  android:background="?android:attr/selectableItemBackground"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+
+  <RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/parent_layout">
+
+    <androidx.cardview.widget.CardView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      card_view:cardCornerRadius="5dp"
+      card_view:cardElevation="5dp"
+      card_view:cardUseCompatPadding="true"
+      tools:ignore="InefficientWeight">
+
+
+      <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_layout">
+
+
+        <ImageView
+          android:scaleType="centerCrop"
+          android:id="@+id/image"
+          android:layout_width="match_parent"
+          android:layout_height="80dp"/>
+
+        <TextView
+          android:paddingEnd="4dp"
+          android:paddingStart="4dp"
+          android:layout_marginTop="8dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/badge"
+          android:text="bestseller"
+          android:textSize="12sp"
+          android:background="@color/yellow"
+          android:textColor="@color/black"/>
+
+        <TextView
+          android:layout_below="@id/image"
+          android:paddingStart="5dp"
+          android:paddingLeft="5dp"
+          android:layout_marginTop="2dp"
+          android:ellipsize="end"
+          android:maxLines="2"
+          android:textSize="12sp"
+          android:text="Tittle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/tittle"/>
+        <TextView
+          android:fontFamily="@font/nexa_light"
+          android:layout_below="@id/tittle"
+          android:paddingStart="5dp"
+          android:paddingLeft="5dp"
+          android:layout_marginTop="5dp"
+          android:ellipsize="end"
+          android:maxLines="2"
+          android:textSize="12sp"
+          android:text="desc"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/desc"/>
+
+        <RelativeLayout
+          android:layout_below="@id/desc"
+          android:layout_marginTop="10dp"
+          android:paddingStart="5dp"
+          android:paddingLeft="5dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/ic_item"
+            android:src="@drawable/head"
+            android:layout_width="15dp"
+            android:layout_height="25dp"/>
+
+          <TextView
+            android:layout_centerVertical="true"
+            android:paddingStart="5dp"
+            android:paddingLeft="5dp"
+            android:layout_toRightOf="@id/ic_item"
+            android:id="@+id/partner"
+            android:fontFamily="@font/nexa_light"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            android:text="Partner Z"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+
+        </RelativeLayout>
+
+      </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+  </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".controller.home.main_menu.employee_corner.EmployeeCornerActivity"
+
+    >
+
+    <item
+        android:id="@+id/action_favorite"
+        android:orderInCategory="300"
+        android:title="User"
+        android:iconTint="@color/white"
+        android:icon="@drawable/places_ic_search"
+        app:showAsAction="ifRoom"></item>
+
+</menu>

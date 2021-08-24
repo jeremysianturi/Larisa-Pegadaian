@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  tools:context=".controller.home.main_menu.mydevelopment.marketplace.fragment_home.FeaturedFragment">
+
+
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+      android:id="@+id/container_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:orientation="vertical">
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+        <!--        android:background="#BB4B53">-->
+
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <!--
+              put your activity content here
+              You can change the layout to anything you want
+              right now it is a linear layout
+          -->
+        </LinearLayout>
+
+        <TextView
+          android:fontFamily="@font/nexa_bold"
+          android:id="@+id/name"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:gravity="center"
+          android:text="My Courses"
+          android:textColor="#FFF"
+          android:textSize="16sp" />
+
+        <ImageView
+
+          android:id="@+id/CreateNewCustomer"
+          android:layout_width="30dp"
+          android:layout_height="25dp"
+          android:layout_alignParentEnd="true"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="20dp"
+          app:srcCompat="@drawable/ic_shopping" />
+      </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <LinearLayout
+        android:background="@color/black_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+<!--        <SearchView-->
+<!--          android:id="@+id/searchviews"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:imeOptions="actionDone"-->
+<!--          android:layout_marginStart="8dp"-->
+<!--          android:layout_marginEnd="8dp"-->
+<!--          android:layout_marginTop="5dp"-->
+<!--          android:layout_marginBottom="5dp"-->
+<!--          android:background="@drawable/border_shadow_round"-->
+<!--          />-->
+        <EditText
+          android:fontFamily="@font/nexa_bold"
+          android:imeOptions="actionSearch"
+          android:background="@drawable/border_shadow_round"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+          android:layout_marginTop="10dp"
+          android:layout_marginBottom="5dp"
+          android:paddingLeft="8dp"
+          android:paddingTop="3dp"
+          android:paddingBottom="3dp"
+          android:paddingRight="8dp"
+          android:id="@+id/inputSearch"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:drawableRight="@android:drawable/ic_menu_search"
+          android:hint="Search ..."
+          android:textSize="12sp" />
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+      <Spinner
+        android:background="@drawable/border_shadow_round"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/filter"/>
+      </LinearLayout>
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerViews"/>
+    </LinearLayout>
+
+  </LinearLayout>
+
+
+  <!--  ======================  halaman belum ada course ===========================-->
+
+<!--  <LinearLayout-->
+<!--    android:orientation="vertical"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--    <LinearLayout-->
+<!--      android:weightSum="2"-->
+<!--      android:layout_width="match_parent"-->
+<!--      android:layout_height="match_parent"-->
+<!--      android:orientation="vertical">-->
+
+<!--      <LinearLayout-->
+<!--        android:orientation="vertical"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="0.7">-->
+<!--        <ImageView-->
+<!--          android:layout_width="100dp"-->
+<!--          android:layout_height="150dp"-->
+<!--          android:src="@drawable/profile"/>-->
+
+<!--        <TextView-->
+<!--          android:paddingTop="10dp"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:fontFamily="@font/nexa_bold"-->
+<!--          android:text="What will you learn first"-->
+<!--          android:textSize="18sp"-->
+<!--          android:textColor="@color/black"-->
+<!--          android:gravity="center_horizontal"/>-->
+
+<!--        <TextView-->
+<!--          android:paddingTop="20dp"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:fontFamily="@font/nexa_bold"-->
+<!--          android:text="Your courses will go here"-->
+<!--          android:textSize="18sp"-->
+<!--          android:textColor="@color/black_overlay"-->
+<!--          android:gravity="center_horizontal"/>-->
+
+
+
+<!--      </LinearLayout>-->
+<!--      <LinearLayout-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:paddingRight="10dp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="1.3">-->
+
+<!--        <TextView-->
+<!--          android:layout_marginTop="20dp"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:text="Browse Categories"-->
+<!--          android:textColor="@color/black"-->
+<!--          android:textSize="14sp"/>-->
+
+<!--        <LinearLayout-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="wrap_content">-->
+
+
+<!--        <LinearLayout-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          android:orientation="horizontal">-->
+
+<!--          <ImageView-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:src="@drawable/ic_mytask"/>-->
+
+<!--          <TextView-->
+<!--            android:paddingLeft="5dp"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="Finance and Accounting"/>-->
+<!--        </LinearLayout>-->
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--          android:paddingTop="5dp"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="wrap_content">-->
+
+
+<!--          <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <ImageView-->
+<!--              android:layout_width="40dp"-->
+<!--              android:layout_height="40dp"-->
+<!--              android:src="@drawable/ic_mytask"/>-->
+
+<!--            <TextView-->
+<!--              android:paddingLeft="5dp"-->
+<!--              android:gravity="center_vertical"-->
+<!--              android:layout_width="match_parent"-->
+<!--              android:layout_height="match_parent"-->
+<!--              android:text="Development"/>-->
+<!--          </LinearLayout>-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--          android:paddingTop="5dp"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="wrap_content">-->
+
+
+<!--          <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <ImageView-->
+<!--              android:layout_width="40dp"-->
+<!--              android:layout_height="40dp"-->
+<!--              android:src="@drawable/ic_mytask"/>-->
+
+<!--            <TextView-->
+<!--              android:paddingLeft="5dp"-->
+<!--              android:gravity="center_vertical"-->
+<!--              android:layout_width="match_parent"-->
+<!--              android:layout_height="match_parent"-->
+<!--              android:text="Bussiness"/>-->
+<!--          </LinearLayout>-->
+<!--        </LinearLayout>-->
+
+
+<!--      </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+
+
+
+
+
+
+
+<!--  </LinearLayout>-->
+
+
+</FrameLayout>

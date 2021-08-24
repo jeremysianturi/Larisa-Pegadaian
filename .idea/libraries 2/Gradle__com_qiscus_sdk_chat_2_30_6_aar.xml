@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="Gradle: com.qiscus.sdk:chat:2.30.6@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c45dd5984738007c1c9bcd55e88becb/jetified-chat-2.30.6/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aa6e6f7305b9684a612522026ccf6c6d/jetified-chat-2.30.6/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/521c2d0e1b92c6de217b2f9a55b0d448/jetified-chat-2.30.6/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c45dd5984738007c1c9bcd55e88becb/jetified-chat-2.30.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c45dd5984738007c1c9bcd55e88becb/jetified-chat-2.30.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c45dd5984738007c1c9bcd55e88becb/jetified-chat-2.30.6/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aa6e6f7305b9684a612522026ccf6c6d/jetified-chat-2.30.6/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aa6e6f7305b9684a612522026ccf6c6d/jetified-chat-2.30.6/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aa6e6f7305b9684a612522026ccf6c6d/jetified-chat-2.30.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/521c2d0e1b92c6de217b2f9a55b0d448/jetified-chat-2.30.6/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/521c2d0e1b92c6de217b2f9a55b0d448/jetified-chat-2.30.6/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/521c2d0e1b92c6de217b2f9a55b0d448/jetified-chat-2.30.6/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.qiscus.sdk/chat/2.30.6/16c5b8a2e69e256d31293d8737d1f399ae1871a6/chat-2.30.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

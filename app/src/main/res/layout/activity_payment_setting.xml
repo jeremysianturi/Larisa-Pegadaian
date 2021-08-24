@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context=".controller.home.main_menu.mydevelopment.marketplace.PayActivity.settting.PaymentSettingActivity">
+
+  <LinearLayout
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<!--    <TextView-->
+<!--      android:layout_marginTop="5dp"-->
+<!--      android:layout_marginBottom="16dp"-->
+<!--      android:layout_width="match_parent"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:textSize="14sp"-->
+<!--      android:text="Payment Method"-->
+<!--      android:textColor="@color/black"-->
+<!--      android:fontFamily="@font/nexa_bold"/>-->
+
+
+    <LinearLayout
+      android:weightSum="2"
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1.5"
+      android:gravity="center">
+
+      <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/ic_upoint">
+      </ImageView>
+
+
+    </LinearLayout>
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="0.5"
+      android:gravity="center">
+
+      <TextView
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="UPoin"
+        android:textColor="@color/black"
+        />
+      <TextView
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Balance Rp. 0"
+        android:fontFamily="@font/nexa_light"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_marginTop="10dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:weightSum="2"
+      android:orientation="horizontal">
+
+      <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5">
+        <ImageView
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          app:srcCompat="@drawable/ic_upoint">
+        </ImageView>
+
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        android:layout_weight="0.5">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="horizontal">
+
+          <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="LinkAja"
+            android:fontFamily="@font/nexa_light"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+          android:gravity="right"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:orientation="vertical">
+
+         <TextView
+           android:textColor="@color/light_green"
+           android:background="@drawable/rounded_list"
+           android:paddingTop="5dp"
+           android:paddingBottom="5dp"
+           android:paddingRight="10dp"
+           android:paddingLeft="10dp"
+           android:layout_marginRight="16dp"
+           android:text="Link"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+         </TextView>
+        </LinearLayout>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+  </LinearLayout>
+</LinearLayout>

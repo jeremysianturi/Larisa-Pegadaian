@@ -1,0 +1,171 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context=".controller.more.myevent.MyEventActivity"-->
+    <!--android:orientation="vertical"-->
+    <!--android:weightSum="2">-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_weight="1.7"-->
+        <!--android:weightSum="2"-->
+        <!--android:visibility="gone">-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_weight="1.2">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/label"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:gravity="center|left"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:text="Choose this option"-->
+                <!--android:textSize="14sp" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="0.8"-->
+            <!--android:weightSum="2"-->
+           <!--android:layout_margin="3dp"-->
+            <!--android:background="@drawable/border"-->
+            <!--android:orientation="horizontal">-->
+            <!--<LinearLayout-->
+                <!--android:id="@+id/opsi"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="0.5"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/option"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="Public"-->
+                    <!--android:textSize="14sp" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1.5"-->
+                <!--android:orientation="vertical"-->
+                <!--android:padding="10dp">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:src="@drawable/down"-->
+                    <!--android:scaleType="fitEnd"-->
+                    <!--android:layout_marginRight="5dp"/>-->
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+
+
+
+
+    <!--</LinearLayout>-->
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="0.3"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_marginTop="8dp">-->
+        <!--&lt;!&ndash;<ListView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/list_event"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:divider="#FFF"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:dividerHeight="2dp">&ndash;&gt;-->
+
+        <!--&lt;!&ndash;</ListView>&ndash;&gt;-->
+
+
+        <!--<com.google.android.material.appbar.AppBarLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+            <!--<com.google.android.material.tabs.TabLayout-->
+                <!--android:id="@+id/tabs"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="#fff"-->
+                <!--app:tabGravity="fill"-->
+                <!--app:tabIndicatorColor="#B3141C"-->
+                <!--app:tabMode="fixed"-->
+                <!--app:tabSelectedTextColor="#B3141C"-->
+                <!--app:tabTextColor="#767676" />-->
+        <!--</com.google.android.material.appbar.AppBarLayout>-->
+
+        <!--<androidx.viewpager.widget.ViewPager-->
+            <!--android:id="@+id/viewpager"-->
+            <!--android:background="#FFF"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
+
+
+
+
+    <!--</LinearLayout>-->
+
+
+
+
+<!--</LinearLayout>-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNull"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="No Data"
+                android:textSize="30sp" />
+
+            <ListView
+                android:id="@+id/list_upcoming"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#FFF"
+                android:dividerHeight="5.0sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

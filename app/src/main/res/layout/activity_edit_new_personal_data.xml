@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cl_edit_personaldata"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.home.main_menu.personal_data.add_data.AddPersonalDataActivity">
+
+    <TextView
+        android:id="@+id/tv_titleedit_datatype"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Choose your data type"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:layout_margin="14dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_edit_datatype_object">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_edit_datatype_object"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_margin="14dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_titleedit_datatype"
+        app:layout_constraintBottom_toTopOf="@id/tv_titlesecond">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_titlesecond"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tipe Alat Komunikasi"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:layout_margin="14dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_edit_datatype_object"
+        app:layout_constraintBottom_toTopOf="@id/et_second">
+    </TextView>
+
+    <EditText
+        android:id="@+id/et_second"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_margin="14dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_titlesecond"
+        app:layout_constraintBottom_toTopOf="@id/tv_titlethird">
+    </EditText>
+
+    <TextView
+        android:id="@+id/tv_titlethird"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="et1"
+        android:textStyle="bold"
+        android:gravity="start"
+        android:layout_margin="14dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_second"
+        app:layout_constraintBottom_toTopOf="@id/et_third">
+    </TextView>
+
+    <EditText
+        android:id="@+id/et_third"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_margin="14dp"
+        android:background="@drawable/button_white"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_titlethird"
+        app:layout_constraintBottom_toTopOf="@id/linear_foredit_identification">
+    </EditText>
+
+    <LinearLayout
+        android:id="@+id/linear_foredit_identification"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:visibility="gone"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_foredit_identification"
+        app:layout_constraintBottom_toTopOf="@id/btn_submit_editData">
+
+        <LinearLayout
+            android:id="@+id/linear_leftedit_identification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_titleedit_dateissue_identification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date Issued"
+                android:textStyle="bold"
+                android:gravity="start"
+                android:layout_margin="14dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et1"
+                app:layout_constraintBottom_toTopOf="@id/et2">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_edit_dateissue_identification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_margin="14dp"
+                android:background="@drawable/button_white"
+                android:padding="4dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_et2"
+                app:layout_constraintBottom_toTopOf="@id/linear_for_identification">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_rightedit_identification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_titleedit_expiredate_identification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Expire Date"
+                android:textStyle="bold"
+                android:gravity="start"
+                android:layout_margin="14dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et1"
+                app:layout_constraintBottom_toTopOf="@id/et2">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv_edit_expiredate_identification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_margin="14dp"
+                android:background="@drawable/button_white"
+                android:padding="4dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title_et2"
+                app:layout_constraintBottom_toTopOf="@id/linear_for_identification">
+            </TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit_editData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@drawable/button"
+        android:layout_margin="14dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_foredit_identification">
+    </Button>
+
+    <LinearLayout
+        android:id="@+id/ll_for_education_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+
+        app:layout_constraintStart_toStartOf="@id/cl_edit_personaldata"
+        app:layout_constraintEnd_toEndOf="@id/cl_edit_personaldata"
+        app:layout_constraintTop_toTopOf="@id/cl_edit_personaldata"
+        app:layout_constraintBottom_toBottomOf="@id/cl_edit_personaldata">
+
+        <LinearLayout
+            android:id="@+id/ll_education_level_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_education_level_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select your education level"
+                android:textStyle="bold"
+                android:gravity="start"
+                android:layout_margin="14dp"
+                android:padding="4dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/spinner_education_level_edit"
+                style="@style/textview_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_margin="14dp"
+                android:padding="4dp">
+            </TextView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_institution_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fill your institution"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/et_intitution_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:background="@drawable/button_white"
+            android:layout_margin="14dp"
+            android:padding="4dp">
+        </EditText>
+
+        <LinearLayout
+            android:id="@+id/ll_faculty_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_faculty_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select your faculty"
+                android:textStyle="bold"
+                android:gravity="start"
+                android:layout_margin="14dp"
+                android:padding="4dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/spinner_faculty_edit"
+                style="@style/textview_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_margin="14dp"
+                android:padding="4dp">
+            </TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_major_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_major_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select your major"
+                android:textStyle="bold"
+                android:gravity="start"
+                android:layout_margin="14dp"
+                android:padding="4dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/spinner_major_edit"
+                style="@style/textview_dropdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_margin="14dp"
+                android:padding="4dp">
+            </TextView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_submajor_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fill your submajor"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/et_submajor_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:background="@drawable/button_white"
+            android:layout_margin="14dp"
+            android:padding="4dp">
+        </EditText>
+
+        <LinearLayout
+            android:id="@+id/linear_for_education_date_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/linear_education_startdate_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_title_education_startdate_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Education start date"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_margin="14dp"
+                    android:padding="4dp">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_education_startdate_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_margin="14dp"
+                    android:background="@drawable/button_white"
+                    android:padding="4dp">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_education_enddate_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_title_education_enddate_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Education end date"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_margin="14dp"
+                    android:padding="4dp">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_education_enddate_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:layout_margin="14dp"
+                    android:background="@drawable/button_white"
+                    android:padding="4dp">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_academic_score_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fill your academic score"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp">
+        </TextView>
+
+        <EditText
+            android:id="@+id/et_academic_score_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:background="@drawable/button_white"
+            android:layout_margin="14dp"
+            android:inputType="numberDecimal"
+            android:maxLength="5"
+            android:padding="4dp">
+        </EditText>
+
+
+        <Button
+            android:id="@+id/btn_submit_education_newlayout_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/button"
+            android:layout_margin="14dp">
+        </Button>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

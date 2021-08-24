@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
+    tools:context=".controller.home.main_menu.eleave.ApprovalEleaveDetail">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginHorizontal="8dp">
+
+        <TextView
+            android:id="@+id/tv_title_eleave_detail_approval"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Detail Persetujuan Cuti"
+            android:background="@drawable/bottom_border_gray_simple"
+            android:layout_marginHorizontal="4dp"
+            android:paddingVertical="12dp"
+            android:gravity="start"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/rv_eleave_detail_approval"
+            app:layout_constraintTop_toTopOf="parent">
+        </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_eleave_detail_approval"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_eleave_detail_approval"
+            app:layout_constraintBottom_toTopOf="@id/tv_tgl_eleave_detail_approval">
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/no_data_eleave_list_detail_approval"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="5dp"
+            android:layout_margin="4dp"
+            android:text="NO DATA"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:visibility="gone"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_eleave_detail_approval"
+            app:layout_constraintBottom_toTopOf="@id/tv_tgl_eleave_detail_approval">
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/tv_tgl_eleave_detail_approval"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Pengajuan Cuti"
+            android:background="@drawable/bottom_border_gray_simple"
+            android:layout_marginHorizontal="4dp"
+            android:paddingVertical="12dp"
+            android:gravity="start"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_eleave_detail_approval"
+            app:layout_constraintBottom_toTopOf="@id/ll_cardview">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/ll_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tgl_eleave_detail_approval"
+            app:layout_constraintBottom_toTopOf="@id/ll_approve_reject_in_approvaleleavedetail">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_eleave_detail_approval"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            card_view:cardCornerRadius="3dp"
+            card_view:cardElevation="4dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:ignore="DuplicateIds"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_tgl_eleave_detail_approval"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/no_data_eleave_list_detail_approval_tanggal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:layout_margin="4dp"
+                    android:text="NO DATA"
+                    android:textSize="40dp"
+                    android:gravity="center"
+                    android:visibility="gone">
+                </TextView>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_approve_reject_in_approvaleleavedetail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_cardview"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                android:id="@+id/btn_approve_approvaleleavedetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Approve"
+                android:background="@drawable/button"
+                android:textColor="@color/white"
+                android:layout_weight="0.5"
+                android:layout_margin="4dp">
+            </Button>
+
+            <Button
+                android:id="@+id/btn_reject_approvaleleavedetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reject"
+                android:background="@drawable/button_red"
+                android:textColor="@color/white"
+                android:layout_weight="0.5"
+                android:layout_margin="4dp">
+            </Button>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

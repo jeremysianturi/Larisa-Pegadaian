@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:padding="5dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <EditText
+                android:id="@+id/editText1"
+                android:background="@drawable/bg_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="0.5"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:padding="5dp"
+                android:layout_marginRight="5dp"
+                android:hint="input partner name">
+
+            <requestFocus />
+            </EditText>
+            <!--<Button-->
+                <!--android:id="@+id/btnSearch"-->
+                <!--android:background="@drawable/button"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1.5"-->
+                <!--android:layout_marginLeft="5dp"-->
+                <!--android:textColor="#FFFFFF"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:text="Search"-->
+                <!--/>-->
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+    </LinearLayout>
+</LinearLayout>

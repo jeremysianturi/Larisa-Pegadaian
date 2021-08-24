@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- First assign id to the list item-->
+    <item  android:id="@+id/mybutton">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/grey" />
+            <corners android:topLeftRadius="4dip" android:topRightRadius="4dip"/>
+        </shape>
+        <item name="android:textAllCaps"
+            tools:ignore="MissingPrefix">false</item>
+    </item>
+</layer-list>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".controller.home.main_menu.eleave.CreateEleave"
+    android:layout_marginVertical="4dp"
+    android:layout_marginHorizontal="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_eleave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pengajuan Cuti"
+            android:background="@drawable/bottom_border_gray_simple"
+            android:layout_marginHorizontal="4dp"
+            android:paddingVertical="12dp"
+            android:gravity="start"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:id="@+id/pc_nik_eleave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"
+            android:text="NIK">
+        </TextView>
+        <TextView
+            android:id="@+id/tv_pc_nik_eleave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/border_rectangle">
+        </TextView>
+
+        <TextView
+            android:id="@+id/pc_name_eleave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"
+            android:text="Name">
+        </TextView>
+        <TextView
+            android:id="@+id/tv_pc_name_eleave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/border_rectangle">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_jenis_konfirmasi_eleave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jenis Cuti"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold">
+        </TextView>
+        <TextView
+            android:id="@+id/spinner_jenis_konfirmasi_eleave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textview_dropdown"
+            android:layout_margin="4dp"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/border_rectangle">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_jenis_konfirmasi_eleave_cutibesar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jenis Cuti Besar"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"
+            android:visibility="gone">
+        </TextView>
+        <TextView
+            android:id="@+id/spinner_jenis_konfirmasi_eleave_cutibesar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/textview_dropdown"
+            android:layout_margin="4dp"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/border_rectangle"
+            android:visibility="gone">
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/ll_afterchoose_jeniscuti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_date_eleave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pc_date_eleave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="E-Leave Date"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="4dp"
+                    android:textStyle="bold">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_margin="4dp"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="8dp"
+                    android:background="@drawable/border_rectangle">
+
+                    <TextView
+                        android:id="@+id/tv_pc_date_eleave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center_vertical">
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/iv_datepicker_eleave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_datepicker"
+                        android:layout_weight="0.8">
+                    </ImageView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_after_date_havevalue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/pc_deskripsi_eleave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="4dp"
+                    android:textStyle="bold">
+                </TextView>
+                <EditText
+                    android:id="@+id/et_pc_deskripsi_eleave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="8dp"
+                    android:background="@drawable/border_rectangle">
+                </EditText>
+
+                <CheckBox
+                    android:id="@+id/checkBox_tunjangan_eleave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tunjangan"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="4dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/pc_attachment_eleave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="File Attachment"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginTop="4dp"
+                    android:textStyle="bold">
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="4dp"
+                    android:paddingHorizontal="4dp"
+                    android:paddingVertical="8dp"
+                    android:background="@drawable/border_rectangle"
+                    android:gravity="end">
+                    <!--        <ImageView-->
+                    <!--            android:id="@+id/iv_pc_attachment"-->
+                    <!--            android:layout_width="match_parent"-->
+                    <!--            android:layout_height="wrap_content"-->
+                    <!--            android:layout_weight="0.2">-->
+                    <!--        </ImageView>-->
+
+                    <ImageView
+                        android:id="@+id/iv_choose_image_eleave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/placeholder_gallery"
+                        android:paddingBottom="4dp">
+                    </ImageView>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_submit_eleave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:background="@drawable/button"
+                    android:textColor="@color/white"
+                    android:layout_margin="4dp">
+                </Button>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

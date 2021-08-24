@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Gradle: com.trello:rxlifecycle-components:1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d66b535628b4bf7b2eda669e6620a8e8/jetified-rxlifecycle-components-1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d66b535628b4bf7b2eda669e6620a8e8/jetified-rxlifecycle-components-1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d66b535628b4bf7b2eda669e6620a8e8/jetified-rxlifecycle-components-1.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f79989649ae73c8e55e2c720b3e809d0/jetified-rxlifecycle-components-1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a25eb1e8c1e09a6a16a41629b56c3673/jetified-rxlifecycle-components-1.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a25eb1e8c1e09a6a16a41629b56c3673/jetified-rxlifecycle-components-1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a25eb1e8c1e09a6a16a41629b56c3673/jetified-rxlifecycle-components-1.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7d1f93a3e73d1c1a9b332c10db667397/jetified-rxlifecycle-components-1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7d1f93a3e73d1c1a9b332c10db667397/jetified-rxlifecycle-components-1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7d1f93a3e73d1c1a9b332c10db667397/jetified-rxlifecycle-components-1.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.trello/rxlifecycle-components/1.0/f39f17ff5954c2cb2f9ce4b3246a61eda7f9b339/rxlifecycle-components-1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.trello/rxlifecycle-components/1.0/ece3ef7adcc69f26def230266e0dc1641b8aeeb7/rxlifecycle-components-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

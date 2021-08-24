@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
+    tools:context=".controller.home.main_menu.eleave.EleaveDetail">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginHorizontal="8dp">
+
+        <TextView
+            android:id="@+id/tv_title_eleave_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Detail Pengajuan Cuti"
+            android:background="@drawable/bottom_border_gray_simple"
+            android:layout_marginHorizontal="4dp"
+            android:paddingVertical="12dp"
+            android:gravity="start"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/rv_eleave_detail"
+            app:layout_constraintTop_toTopOf="parent">
+        </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_eleave_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_eleave_detail"
+            app:layout_constraintBottom_toTopOf="@id/tv_tgl_eleave_detail">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <TextView
+            android:id="@+id/tv_tgl_eleave_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Pengajuan Cuti"
+            android:background="@drawable/bottom_border_gray_simple"
+            android:layout_marginHorizontal="4dp"
+            android:paddingVertical="12dp"
+            android:gravity="start"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_eleave_detail"
+            app:layout_constraintBottom_toTopOf="@id/cardview_eleave_detail">
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_eleave_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="3dp"
+            card_view:cardElevation="4dp"
+            card_view:cardUseCompatPadding="true"
+            card_view:ignore="DuplicateIds"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tgl_eleave_detail"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_tgl_eleave_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

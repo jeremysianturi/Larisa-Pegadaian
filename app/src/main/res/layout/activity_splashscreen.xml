@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splashscreen_bgpolos"
+    tools:context="id.co.pegadaian.diarium.controller.splashscreen.SplashscreenActivity">
+
+<!--    <TextView-->
+<!--        android:id="@+id/diarium_splashscreen_title"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:text="Larisa"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="40dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:gravity="center"-->
+
+
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/tv_manage_your">-->
+<!--    </TextView>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_manage_your"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:text="Manage Your"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="40dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:gravity="center|bottom"-->
+
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/diarium_splashscreen_title"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/tv_daily_activity">-->
+<!--    </TextView>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_daily_activity"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:text="Daily Activity"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="40dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_marginBottom="450dp"-->
+<!--        android:gravity="center|top"-->
+
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_manage_your"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent">-->
+<!--    </TextView>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+

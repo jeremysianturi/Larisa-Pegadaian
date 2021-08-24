@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/parent_view"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <LinearLayout
+    android:id="@+id/container_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/colorPrimary">
+      <!--        android:background="#BB4B53">-->
+
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--
+            put your activity content here
+            You can change the layout to anything you want
+            right now it is a linear layout
+        -->
+      </LinearLayout>
+
+      <TextView
+        android:fontFamily="@font/nexa_bold"
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Chart"
+        android:textColor="#FFF"
+        android:textSize="16sp" />
+
+<!--      <ImageView-->
+
+<!--        android:id="@+id/CreateNewCustomer"-->
+<!--        android:layout_width="30dp"-->
+<!--        android:layout_height="25dp"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        app:srcCompat="@drawable/ic_shopping" />-->
+    </RelativeLayout>
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_marginTop="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+      android:layout_marginLeft="16dp"
+      android:layout_marginRight="16dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="14sp"
+      android:text="1 item"
+      android:fontFamily="@font/nexa_bold"
+      android:textColor="@color/black"/>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recyclerViews"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+
+  </LinearLayout>
+
+
+</LinearLayout>

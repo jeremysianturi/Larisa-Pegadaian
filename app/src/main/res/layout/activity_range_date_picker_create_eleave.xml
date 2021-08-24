@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".controller.home.main_menu.eleave.RangeDatePickerCreateEleave">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            custom:cardCornerRadius="8dp">
+
+            <TextView
+                android:id="@+id/tv_judul_tipecuti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:text="Tipe Cuti"
+                android:padding="15dp"
+                android:background="@color/green_pegadaian_color"
+                android:gravity="center_horizontal">
+            </TextView>
+
+        </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCalendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        custom:cardCornerRadius="8dp">
+
+        <com.archit.calendardaterangepicker.customviews.DateRangeCalendarView
+            android:id="@+id/rangeCalendarCuti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:calendar_tag="Test"
+            custom:disable_date_color="#ABABAB"
+            custom:editable="true"
+            custom:date_selection_mode="fixed_range"
+            custom:enable_time_selection="false"
+            custom:range_color="@color/green_pale"
+            custom:selected_date_circle_color="@color/green_pegadaian_color"
+            custom:title_color="@color/black"
+            custom:week_offset="0"
+            android:visibility="gone">
+        </com.archit.calendardaterangepicker.customviews.DateRangeCalendarView>
+
+        <com.archit.calendardaterangepicker.customviews.DateRangeCalendarView
+            android:id="@+id/rangeCalendarPresConf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:calendar_tag="Test"
+            custom:disable_date_color="#ABABAB"
+            custom:editable="true"
+            custom:date_selection_mode="free_range"
+            custom:enable_time_selection="false"
+            custom:range_color="@color/green_pale"
+            custom:selected_date_circle_color="@color/green_pegadaian_color"
+            custom:title_color="@color/black"
+            custom:week_offset="0"
+            android:visibility="gone">
+        </com.archit.calendardaterangepicker.customviews.DateRangeCalendarView>
+<!--        custom:header_bg="@drawable/range_calendar_header"-->
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:weightSum="1">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/button_red"
+            android:textColor="@color/white"
+            android:text="Back" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSubmitDateRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/button"
+            android:textColor="@color/white"
+            android:text="Submit" />
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

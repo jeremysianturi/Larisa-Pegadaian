@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.eltos:simpledialogfragment:2.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dfff1a777da65472c86a37a3fd23d76c/jetified-simpledialogfragment-2.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dfff1a777da65472c86a37a3fd23d76c/jetified-simpledialogfragment-2.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dfff1a777da65472c86a37a3fd23d76c/jetified-simpledialogfragment-2.2/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f753f7863d85b4af374de7a6126aae44/jetified-simpledialogfragment-2.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f753f7863d85b4af374de7a6126aae44/jetified-simpledialogfragment-2.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f753f7863d85b4af374de7a6126aae44/jetified-simpledialogfragment-2.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0571a5400d4cfd1cae93ab4f2f5f796d/jetified-simpledialogfragment-2.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0571a5400d4cfd1cae93ab4f2f5f796d/jetified-simpledialogfragment-2.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0571a5400d4cfd1cae93ab4f2f5f796d/jetified-simpledialogfragment-2.2/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.eltos/simpledialogfragment/2.2/d80a8647c7ddaf814c0f7f96b52edc88ae2e65c0/simpledialogfragment-2.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.eltos/simpledialogfragment/2.2/7f92545577addaa90bcb5e218496e428d7cdd981/simpledialogfragment-2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

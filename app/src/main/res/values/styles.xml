@@ -1,0 +1,95 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+<!--    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">-->
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+<!--        &lt;!&ndash;       set navigation to all nav aplication     &ndash;&gt;-->
+<!--        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>-->
+<!--        &lt;!&ndash;       set navigation to all nav aplication     &ndash;&gt;-->
+    </style>
+
+<!--    <style name="AppThemeRangeDatePicker" parent="Theme.MaterialComponents.Light.DarkActionBar">-->
+<!--        &lt;!&ndash;    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">&ndash;&gt;-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+<!--        &lt;!&ndash;        &lt;!&ndash;       set navigation to all nav aplication     &ndash;&gt;&ndash;&gt;-->
+<!--        &lt;!&ndash;        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>&ndash;&gt;-->
+<!--        &lt;!&ndash;        &lt;!&ndash;       set navigation to all nav aplication     &ndash;&gt;&ndash;&gt;-->
+<!--    </style>-->
+
+    <style
+      name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style
+      name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style
+      name="AppTheme.NoActionBar">
+        <!--<item name="windowActionBar">false</item>-->
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style
+      name="FullscreenTheme" parent="AppTheme.NoActionBar">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style
+      name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style
+      name="AppTheme.NoActionBar.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!--       set navigation to all nav aplication     -->
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+        <!--       set navigation to all nav aplication     -->
+
+    </style>
+
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="for_menu" parent="@android:style/Theme.Holo.Light.DarkActionBar" />
+
+
+    <!--    Activity Animation Navigation  -->
+    <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+<!--    spinner add data personal & family-->
+    <style name="textview_dropdown" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
+        <item name="android:background">@drawable/bg_edittext</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:drawableEnd">@drawable/arrow_down_forspinner</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+</resources>

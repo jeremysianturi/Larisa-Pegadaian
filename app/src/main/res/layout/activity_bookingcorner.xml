@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3"
+    android:background="#f5f5f5"
+    tools:context=".controller.home.main_menu.employee_corner.BookingcornerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1.35"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.5"
+            android:gravity="center|left"
+            android:background="@drawable/border_bottom_right">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/treadmill"
+                android:scaleType="fitStart"
+                android:layout_marginLeft="15dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:layout_marginLeft="10dp"
+                android:text="Booking Sports Corner"
+                android:textSize="16sp"
+                android:id="@+id/booking_name"
+                android:textColor="#ce1000"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:padding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_round"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    >
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:background="@drawable/border_round"
+
+                        android:layout_margin="2dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp">
+
+                            <TextView
+                                android:id="@+id/tvDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:ems="10"
+                                android:gravity="start|center_vertical"
+                                android:text="Choose Date"
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="15dp"
+                                android:layout_gravity="center"
+
+
+                                android:layout_marginLeft="20dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/down" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lvBuilding"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_round"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_weight="0.5"-->
+                            <!--android:orientation="vertical">-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/tvBuilding"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:ems="10"-->
+                                <!--android:gravity="center"-->
+
+                                <!--android:text="Jkt- Telkom Landmark Tower"-->
+                                <!--android:textSize="14sp" />-->
+                        <!--</LinearLayout>-->
+
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_weight="1.5"-->
+                            <!--android:orientation="vertical">-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="15dp"-->
+                                <!--android:layout_height="15dp"-->
+                                <!--android:layout_gravity="center"-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:src="@drawable/down"-->
+
+
+                                <!--/>-->
+
+                        <!--</LinearLayout>-->
+
+                        <Spinner
+                            android:id="@+id/spinnerBuilding"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAlignment="center"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lvFloor"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_round"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_weight="0.5"-->
+                            <!--android:orientation="vertical">-->
+
+                            <!--<TextView-->
+                                <!--android:id="@+id/tvFloor"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:ems="10"-->
+                                <!--android:gravity="center"-->
+
+                                <!--android:text="TLT - Tenis Meja"-->
+                                <!--android:textSize="14sp" />-->
+                        <!--</LinearLayout>-->
+
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_weight="1.5"-->
+                            <!--android:orientation="vertical">-->
+
+                            <!--<ImageView-->
+                                <!--android:layout_width="15dp"-->
+                                <!--android:layout_height="15dp"-->
+                                <!--android:layout_gravity="center"-->
+                                <!--android:layout_weight="1"-->
+                                <!--android:src="@drawable/down"-->
+
+
+                                <!--/>-->
+
+                        <!--</LinearLayout>-->
+
+                        <Spinner
+                            android:id="@+id/spinnerLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAlignment="center"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:padding="8dp">
+
+                <Button
+                    android:id="@+id/btn_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border_choose"
+                    android:text="Search"
+                    android:textSize="15sp"
+                    android:textColor="#FFF"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="0.65"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvNull"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="NO DATA"
+            android:textSize="30sp" />
+
+        <ListView
+
+            android:id="@+id/list_booking"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             android:dividerHeight="2dp"></ListView>
+
+
+
+    </LinearLayout>
+</LinearLayout>

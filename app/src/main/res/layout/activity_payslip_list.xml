@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
+    tools:context=".controller.home.main_menu.payslip.PayslipList">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title_period"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Period"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/spinner_payslip_period">
+        </TextView>
+
+        <TextView
+            android:id="@+id/spinner_payslip_period"
+            style="@style/textview_dropdown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_period"
+            app:layout_constraintBottom_toTopOf="@id/tv_title_type">
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_title_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_payslip_period"
+            app:layout_constraintBottom_toTopOf="@id/spinner_payslip_type">
+        </TextView>
+
+        <TextView
+            android:id="@+id/spinner_payslip_type"
+            style="@style/textview_dropdown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_type"
+            app:layout_constraintBottom_toTopOf="@id/btn_search_payslip">
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_search_payslip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textColor="@color/white"
+            android:background="@drawable/button"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_payslip_type"
+            app:layout_constraintBottom_toTopOf="@id/ll_rincian_gaji">
+        </Button>
+
+        <LinearLayout
+            android:id="@+id/ll_rincian_gaji"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+            android:visibility="gone"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_search_payslip"
+            app:layout_constraintBottom_toTopOf="@+id/ll_penghasilan">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_rinciangaji"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:ignore="DuplicateIds">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="4dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Rincian Gaji"
+                        android:textStyle="bold"
+                        android:textColor="@color/black">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tv_title_totalpenghasilan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Penghasilan"
+                            android:layout_weight="0.7">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tv_value_totalpenghasilan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rp. -"
+                            android:layout_weight="1.3">
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tv_title_totalpotongan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Potongan"
+                            android:layout_weight="0.7">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tv_value_totalpotongan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rp. -"
+                            android:layout_weight="1.3">
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:background="@drawable/border_upper">
+
+                        <TextView
+                            android:id="@+id/tv_title_totaltakehomepay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Take Home Pay"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_marginVertical="4dp"
+                            android:layout_weight="0.7">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tv_value_totaltakehomepay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rp. -"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_marginVertical="4dp"
+                            android:layout_weight="1.3">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_penghasilan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+            android:visibility="gone"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_rincian_gaji"
+            app:layout_constraintBottom_toTopOf="@+id/ll_potongan">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_penghasilan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:ignore="DuplicateIds">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Penghasilan"
+                        android:layout_margin="4dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black">
+                    </TextView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_penghasilan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/total_penghasilan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Penghasilan"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_weight="0.7">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/value_total_penghasilan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rp.0"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_weight="1.3">
+                        </TextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_potongan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="14dp"
+            android:padding="4dp"
+            android:visibility="gone"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_penghasilan"
+            app:layout_constraintBottom_toTopOf="@+id/btn_gotodetail_payslip">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_potongan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="4dp"
+                card_view:cardUseCompatPadding="true"
+                card_view:ignore="DuplicateIds">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Potongan"
+                        android:layout_margin="4dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black">
+                    </TextView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_potongan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/total_potongan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Potongan"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_weight="0.7">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/value_total_potongan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rp.0"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:layout_weight="1.3">
+                        </TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_gotodetail_payslip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to detail"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/button"
+            android:layout_margin="14dp"
+            android:visibility="gone"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_potongan"
+            app:layout_constraintBottom_toBottomOf="parent">
+        </Button>
+
+        <ProgressBar
+            android:id="@+id/progressBar_payslip"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/progressbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

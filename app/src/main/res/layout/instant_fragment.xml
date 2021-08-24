@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <LinearLayout
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp"
+    android:weightSum="2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1">
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ENTER AMOUNT"
+        android:textColor="@color/black_overlay"
+        android:textSize="14sp"
+        android:fontFamily="@font/nexa_bold"/>
+
+      <EditText
+        android:gravity="bottom"
+        android:paddingLeft="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textSize="16dp"
+        android:hint="RP.0"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nexa_bold"/>
+
+      <LinearLayout
+        android:layout_marginTop="20dp"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+          android:orientation="vertical"
+          android:layout_weight="1"
+          android:weightSum="2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:src="@drawable/ic_topup1"/>
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Rp. 20.000"
+              android:textSize="12sp"
+              android:fontFamily="@font/nexa_bold"
+              android:textColor="@color/black"/>
+
+          </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+          android:orientation="vertical"
+          android:layout_weight="1"
+          android:weightSum="2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:src="@drawable/ic_topup2"/>
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Rp. 20.000"
+              android:textSize="12sp"
+              android:fontFamily="@font/nexa_bold"
+              android:textColor="@color/black"/>
+
+          </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+          android:orientation="vertical"
+          android:layout_weight="1"
+          android:weightSum="2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <LinearLayout
+            android:gravity="center_horizontal"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:src="@drawable/ic_topup3"/>
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Rp. 20.000"
+              android:textSize="12sp"
+              android:fontFamily="@font/nexa_bold"
+              android:textColor="@color/black"/>
+
+          </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+          android:orientation="vertical"
+          android:layout_weight="1"
+          android:weightSum="2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+              android:layout_width="50dp"
+              android:layout_height="50dp"
+              android:src="@drawable/ic_topup4"/>
+
+            <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Rp. 20.000"
+              android:textSize="12sp"
+              android:fontFamily="@font/nexa_bold"
+              android:textColor="@color/black"/>
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+      android:weightSum="2"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1">
+
+      <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="ENTER AMOUNT"
+          android:textColor="@color/black_overlay"
+          android:textSize="14sp"
+          android:fontFamily="@font/nexa_bold"/>
+
+        <LinearLayout
+          android:layout_marginTop="20dp"
+          android:weightSum="2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center">
+
+            <ImageView
+              android:layout_width="match_parent"
+              android:layout_height="50dp"
+              android:src="@drawable/ic_mytask"/>
+          </LinearLayout>
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center">
+
+            <TextView
+              android:gravity="center_vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:text="LinkAja"
+              android:textColor="@color/black"
+              android:textSize="14dp"
+              android:fontFamily="@font/nexa_bold"/>
+
+          </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+      </LinearLayout>
+      <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+          android:layout_marginRight="10dp"
+          android:layout_marginLeft="10dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="PROCEED"
+          android:textSize="@dimen/text_14sp_ecp"
+          android:textColor="@color/white"
+          android:background="#008000"/>
+
+      </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+  </LinearLayout>
+
+</LinearLayout>

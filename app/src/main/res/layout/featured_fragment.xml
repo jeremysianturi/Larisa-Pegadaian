@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  tools:context=".controller.home.main_menu.mydevelopment.marketplace.fragment_home.FeaturedFragment">
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+ <LinearLayout
+   android:paddingBottom="50dp"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:orientation="vertical">
+
+
+<!--================================ image slider ==========================-->
+   <LinearLayout
+     android:orientation="vertical"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content">
+
+     <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+<!--       <com.synnapps.carouselview.CarouselView-->
+<!--         android:id="@+id/carouselView"-->
+<!--         android:layout_width="match_parent"-->
+<!--         android:layout_height="200dp"-->
+<!--         app:fillColor="#FFFFFFFF"-->
+<!--         app:pageColor="#00000000"-->
+<!--         app:radius="6dp"-->
+<!--         app:autoPlay="true"-->
+<!--         app:indicatorVisibility="visible"-->
+<!--         app:indicatorGravity="bottom"-->
+<!--         app:indicatorOrientation="horizontal"-->
+<!--         app:slideInterval="3000"-->
+<!--         app:strokeColor="#FF777777"-->
+<!--         app:strokeWidth="1dp"/>-->
+
+       <com.jama.carouselview.CarouselView
+         android:focusableInTouchMode="true"
+         android:focusable="true"
+         android:id="@+id/carouselView"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:spacing="1" />
+
+
+<!--       <ImageView-->
+<!--         android:paddingEnd="5dp"-->
+<!--         android:paddingStart="5dp"-->
+<!--         android:scaleType="centerCrop"-->
+<!--         android:src="@drawable/events"-->
+<!--         android:layout_width="match_parent"-->
+<!--         android:layout_height="match_parent">-->
+
+<!--       </ImageView>-->
+
+
+     </LinearLayout>
+
+
+     <!--================================ Box 1 ==========================-->
+
+     <LinearLayout
+       android:layout_marginTop="10dp"
+       android:layout_marginLeft="16dp"
+       android:layout_marginRight="16dp"
+       android:background="@drawable/border_round"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+       <LinearLayout
+         android:background="@color/black"
+         android:weightSum="2"
+         android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+         <LinearLayout
+           android:orientation="horizontal"
+           android:layout_weight="1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <ImageView
+             android:paddingTop="5dp"
+             android:paddingBottom="5dp"
+             android:layout_width="25dp"
+             android:layout_height="20dp"
+             android:src="@drawable/ic_upoint"/>
+           <TextView
+             android:fontFamily="@font/nexa_bold"
+             android:gravity="center_vertical"
+             android:paddingLeft="5dp"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:text="UPoint"
+             android:textSize="14sp"
+             android:textColor="@color/white"/>
+
+
+         </LinearLayout>
+
+         <LinearLayout
+           android:layout_weight="1"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <TextView
+             android:fontFamily="@font/nexa_bold"
+             android:paddingRight="10dp"
+             android:gravity="right|center_vertical"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:text="Rp. 0"
+             android:textSize="14sp"
+             android:textColor="@color/white"/>
+
+         </LinearLayout>
+
+       </LinearLayout>
+
+       <LinearLayout
+         android:paddingTop="5dp"
+         android:paddingBottom="5dp"
+         android:background="@color/black_overlay"
+         android:weightSum="4"
+         android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+<!--         ============================== pay -->
+         <LinearLayout
+           android:id="@+id/layout_pay"
+           android:layout_weight="1"
+           android:weightSum="2"
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+             android:layout_weight="1"
+             android:layout_width="match_parent"
+             android:layout_height="35dp">
+             <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:src="@drawable/pay"/>
+
+           </LinearLayout>
+           <LinearLayout
+             android:layout_weight="1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+             <TextView
+               android:gravity="center"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Pay"
+               android:textSize="10dp"
+               android:textColor="@color/white"
+               android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+           </LinearLayout>
+
+         </LinearLayout>
+
+<!--         ============================== Top Up -->
+         <LinearLayout
+           android:id="@+id/layout_topup"
+           android:layout_weight="1"
+           android:weightSum="2"
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+             android:layout_weight="1"
+             android:layout_width="match_parent"
+             android:layout_height="35dp">
+             <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:src="@drawable/ic_topup"/>
+
+<!--             <ImageView-->
+<!--               android:id="@+id/imageView6"-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:layout_weight="1"-->
+<!--               android:src="@drawable/ic_topup" />-->
+
+           </LinearLayout>
+           <LinearLayout
+             android:layout_weight="1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+             <TextView
+               android:gravity="center"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Top Up"
+               android:textSize="10dp"
+               android:textColor="@color/white"
+               android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+           </LinearLayout>
+
+         </LinearLayout>
+<!--         ============================== history -->
+         <LinearLayout
+           android:id="@+id/layout_history"
+           android:layout_weight="1"
+           android:weightSum="2"
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+             android:layout_weight="1"
+             android:layout_width="match_parent"
+             android:layout_height="35dp">
+             <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:src="@drawable/ic_history"/>
+
+           </LinearLayout>
+           <LinearLayout
+             android:layout_weight="1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+             <TextView
+               android:gravity="center"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="History"
+               android:textSize="10dp"
+               android:textColor="@color/white"
+               android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+           </LinearLayout>
+
+         </LinearLayout>
+<!--         ============================== setting -->
+         <LinearLayout
+           android:id="@+id/layout_setting"
+           android:layout_weight="1"
+           android:weightSum="2"
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+             android:layout_weight="1"
+             android:layout_width="match_parent"
+             android:layout_height="35dp">
+             <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:src="@drawable/ic_setting"/>
+
+           </LinearLayout>
+           <LinearLayout
+             android:layout_weight="1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+             <TextView
+               android:gravity="center"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Setting"
+               android:textSize="10dp"
+               android:textColor="@color/white"
+               android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+           </LinearLayout>
+
+         </LinearLayout>
+
+
+
+       </LinearLayout>
+     </LinearLayout>
+
+     <!--================================ Categories ==========================-->
+
+     <LinearLayout
+       android:background="@drawable/border_shadow"
+       android:layout_marginTop="10dp"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="10dp"
+         android:orientation="horizontal"
+         android:weightSum="2">
+
+         <TextView
+           android:paddingTop="5dp"
+           android:fontFamily="@font/montserrat_semibold"
+           android:id="@+id/judulsub"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="5dp"
+           android:layout_weight="1"
+           android:gravity="center|left"
+           android:text="Categories"
+           android:textColor="#000"
+           android:textSize="14sp" />
+
+         <TextView
+           android:paddingTop="5dp"
+           android:fontFamily="@font/nexa_bold"
+           android:id="@+id/moreinbox"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginRight="5dp"
+           android:layout_weight="1"
+           android:gravity="right|center"
+           android:text="See All ..."
+           android:textColor="#808080"
+           android:textSize="12sp" />
+
+       </LinearLayout>
+
+       <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="5dp"
+         android:layout_marginBottom="10dp"
+         android:layout_weight="0.85"
+         android:orientation="vertical"
+         android:weightSum="2">
+
+         <id.co.pegadaian.diarium.util.ExpandableHeightGridView
+           android:id="@+id/gridview"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:horizontalSpacing="1dp"
+           android:isScrollContainer="false"
+           android:numColumns="6"
+           android:stretchMode="columnWidth"
+           android:verticalSpacing="10dp" />
+       </LinearLayout>
+
+     </LinearLayout>
+
+<!--     ====================  best Seller =====-->
+
+     <LinearLayout
+       android:layout_marginRight="10dp"
+       android:layout_marginLeft="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:weightSum="2">
+
+       <TextView
+         android:paddingTop="5dp"
+         android:fontFamily="@font/nexa_bold"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="5dp"
+         android:layout_weight="1"
+         android:gravity="center|left"
+         android:text="Best Seller"
+         android:textColor="#000"
+         android:textSize="14sp" />
+
+
+     </LinearLayout>
+
+     <LinearLayout
+
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+       <androidx.recyclerview.widget.RecyclerView
+         android:focusableInTouchMode="true"
+         android:focusable="true"
+         android:layout_marginTop="5dp"
+         android:paddingLeft="16dp"
+         android:paddingRight="16dp"
+         android:id="@+id/recyclerViews"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+       </androidx.recyclerview.widget.RecyclerView>
+     </LinearLayout>
+
+
+
+     <LinearLayout
+       android:layout_marginTop="10dp"
+       android:layout_marginRight="10dp"
+       android:layout_marginLeft="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:weightSum="2">
+
+       <TextView
+         android:paddingTop="5dp"
+         android:fontFamily="@font/nexa_bold"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="5dp"
+         android:layout_weight="1"
+         android:gravity="center|left"
+         android:text="Trending "
+         android:textColor="#000"
+         android:textSize="14sp" />
+
+
+     </LinearLayout>
+
+     <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <androidx.recyclerview.widget.RecyclerView
+         android:focusableInTouchMode="true"
+         android:focusable="true"
+         android:layout_marginTop="5dp"
+         android:paddingLeft="16dp"
+         android:paddingRight="16dp"
+         android:id="@+id/recyclerViews2"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+       </androidx.recyclerview.widget.RecyclerView>
+
+     </LinearLayout>
+
+
+     <!--     ==================== Review =====-->
+
+     <LinearLayout
+       android:layout_marginTop="10dp"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:background="@color/grey"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <TextView
+         android:paddingTop="5dp"
+         android:fontFamily="@font/nexa_bold"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="5dp"
+         android:layout_weight="1"
+         android:text="Reviews "
+         android:textColor="#000"
+         android:textSize="14sp" />
+
+       <RelativeLayout
+         android:id="@+id/parent_review"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+         <androidx.recyclerview.widget.RecyclerView
+           android:focusableInTouchMode="true"
+           android:focusable="true"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/recyclerViews3">
+
+         </androidx.recyclerview.widget.RecyclerView>
+
+       </RelativeLayout>
+
+     </LinearLayout>
+
+   </LinearLayout>
+ </LinearLayout>
+  </ScrollView>
+
+</FrameLayout>

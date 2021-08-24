@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="Gradle: com.vanniktech:emoji-one:0.5.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1bf093851a8e41d47a0fb0eba91b4eb7/jetified-emoji-one-0.5.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1bf093851a8e41d47a0fb0eba91b4eb7/jetified-emoji-one-0.5.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1bf093851a8e41d47a0fb0eba91b4eb7/jetified-emoji-one-0.5.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/889f656e3a14ca5a96138413f081d7f3/jetified-emoji-one-0.5.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/889f656e3a14ca5a96138413f081d7f3/jetified-emoji-one-0.5.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/889f656e3a14ca5a96138413f081d7f3/jetified-emoji-one-0.5.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/42aabe60464a91fead0a5be86ba75ab5/jetified-emoji-one-0.5.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/42aabe60464a91fead0a5be86ba75ab5/jetified-emoji-one-0.5.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/42aabe60464a91fead0a5be86ba75ab5/jetified-emoji-one-0.5.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.vanniktech/emoji-one/0.5.0/5fa9f433897865311f7cecac45cebef7b58db26f/emoji-one-0.5.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.vanniktech/emoji-one/0.5.0/826a3da4947eec1d6305464bc0564f711fdd697b/emoji-one-0.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

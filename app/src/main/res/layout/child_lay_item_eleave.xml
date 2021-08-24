@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/child_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:padding="10dp"
+        android:text="TextView"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@id/child_tglcuti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/child_tglcuti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@id/ll_child_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/child_textView"
+        android:text="detail tanggal cuti"/>
+
+    <LinearLayout
+        android:id="@+id/ll_child_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/child_tglcuti">
+
+        <TextView
+            android:id="@+id/tv_child_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="status detail"
+            android:gravity="center">
+        </TextView>
+
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_child_status"-->
+<!--            android:layout_width="126dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_weight="0.8"-->
+<!--            android:src="@drawable/waiting_surattugas">-->
+<!--        </ImageView>-->
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

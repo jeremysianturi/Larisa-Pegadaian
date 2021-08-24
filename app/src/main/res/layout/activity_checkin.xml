@@ -1,0 +1,926 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/checkin"
+    android:weightSum="3">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:orientation="vertical">
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".controller.home.main_menu.mytime.checkin.CheckinActivity" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_weight="1.6"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:spinnerMode="dialog"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.4"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="7dp">
+
+                                <ImageView
+                                    android:id="@+id/imageView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scaleType="fitEnd"
+                                    app:srcCompat="@drawable/calendar" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/date1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="left|center"
+                                    android:text="Date" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvDay"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="bottom|center"
+                                    android:textColor="@color/green_pegadaian_color"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="top|center"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.4"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="7dp">
+
+                                <ImageView
+                                    android:id="@+id/imageView2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:scaleType="fitEnd"
+                                    app:srcCompat="@drawable/time" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/date3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="left|center"
+                                    android:text="Time" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.6"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:textColor="@color/green_pegadaian_color"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_centerHorizontal="true"
+              android:layout_marginLeft="15dp"
+              android:layout_marginTop="2dp"
+              android:layout_marginRight="15dp"
+              android:layout_marginBottom="5dp"
+              app:cardBackgroundColor="#FFFFFF"
+              app:cardCornerRadius="0dp">
+
+                <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+                    <TextView
+                      android:textStyle="bold"
+                      android:paddingTop="10dp"
+                      android:paddingLeft="5dp"
+                      android:textSize="14sp"
+                      android:text="Description"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"/>
+
+                    <EditText
+                      android:paddingLeft="5dp"
+                      android:inputType="textMultiLine"
+                      android:lineSpacingExtra="5dp"
+                      android:gravity="left|top"
+                      android:textSize="@dimen/text_14sp_ecp"
+                      android:hint="write here ..."
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:id="@+id/desc_post"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="1.1"
+      android:orientation="vertical">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_centerHorizontal="true"
+          android:layout_marginLeft="15dp"
+          android:layout_marginTop="10dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="20dp">
+
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:weightSum="2">
+
+                <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1.3"
+                  android:orientation="vertical"
+                  android:weightSum="2">
+
+                    <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="0.8"
+                      android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/feel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="How do you feel today? " />
+                    </LinearLayout>
+
+<!--                    <LinearLayout-->
+<!--                      android:layout_width="match_parent"-->
+<!--                      android:layout_height="match_parent"-->
+<!--                      android:layout_weight="1.1"-->
+<!--                      android:orientation="horizontal">-->
+
+<!--                        <TextView-->
+<!--                          android:id="@+id/feel2"-->
+<!--                          android:layout_width="match_parent"-->
+<!--                          android:layout_height="match_parent"-->
+<!--                          android:layout_weight="1"-->
+<!--                          android:gravity="center"-->
+<!--                          android:text="Choose your expression"-->
+<!--                          android:textSize="12sp" />-->
+<!--                    </LinearLayout>-->
+                </LinearLayout>
+
+<!--                LAMA-->
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/linear_first"-->
+<!--                  android:layout_width="match_parent"-->
+<!--                  android:layout_height="match_parent"-->
+<!--                  android:layout_weight="0.7"-->
+<!--                  android:orientation="horizontal"-->
+<!--                  android:weightSum="3">-->
+
+<!--                    <LinearLayout-->
+<!--                      android:id="@+id/linear_underPressure"-->
+
+<!--                      android:layout_width="match_parent"-->
+<!--                      android:layout_height="match_parent"-->
+<!--                      android:layout_weight="1"-->
+<!--                      android:orientation="vertical"-->
+<!--                      android:weightSum="2">-->
+
+<!--                        <LinearLayout-->
+<!--                          android:layout_width="match_parent"-->
+<!--                          android:layout_height="match_parent"-->
+<!--                          android:layout_weight="0.5"-->
+<!--                          android:orientation="vertical"-->
+<!--                          android:padding="13dp">-->
+
+<!--                            <ImageView-->
+<!--                              android:id="@+id/iv_under_pressure"-->
+<!--                              android:layout_width="match_parent"-->
+<!--                              android:layout_height="wrap_content"-->
+<!--                              app:srcCompat="@drawable/suffer" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                          android:id="@+id/linear_tv_underpressure"-->
+<!--                          android:layout_width="match_parent"-->
+<!--                          android:layout_height="match_parent"-->
+<!--                          android:layout_weight="1.5"-->
+<!--                          android:orientation="vertical">-->
+
+<!--                            <TextView-->
+<!--                              android:id="@+id/stress"-->
+<!--                              android:layout_width="match_parent"-->
+<!--                              android:layout_height="match_parent"-->
+<!--                              android:layout_weight="1"-->
+<!--                              android:gravity="center"-->
+<!--                              android:text="Under Pressure"-->
+<!--                              android:textSize="12sp" />-->
+
+<!--                        </LinearLayout>-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                      android:id="@+id/linear_comfort"-->
+<!--                      android:layout_width="match_parent"-->
+<!--                      android:layout_height="match_parent"-->
+<!--                      android:layout_weight="1"-->
+<!--                      android:orientation="vertical"-->
+<!--                      android:weightSum="2">-->
+
+<!--                        <LinearLayout-->
+<!--                          android:layout_width="match_parent"-->
+<!--                          android:layout_height="match_parent"-->
+<!--                          android:layout_weight="0.5"-->
+<!--                          android:orientation="vertical"-->
+<!--                          android:padding="13dp">-->
+
+<!--                            <ImageView-->
+<!--                              android:id="@+id/iv_comfort"-->
+<!--                              android:layout_width="match_parent"-->
+<!--                              android:layout_height="wrap_content"-->
+<!--                              app:srcCompat="@drawable/smile" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                          android:layout_width="match_parent"-->
+<!--                          android:layout_height="match_parent"-->
+<!--                          android:layout_weight="1.5"-->
+<!--                          android:orientation="vertical">-->
+
+<!--                            <TextView-->
+<!--                              android:id="@+id/nyaman"-->
+<!--                              android:layout_width="match_parent"-->
+<!--                              android:layout_height="match_parent"-->
+<!--                              android:layout_weight="1"-->
+<!--                              android:gravity="center"-->
+<!--                              android:text="Comfort"-->
+<!--                              android:textSize="12sp" />-->
+
+<!--                        </LinearLayout>-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                      android:id="@+id/linear_happy"-->
+<!--                      android:layout_width="match_parent"-->
+<!--                      android:layout_height="match_parent"-->
+<!--                      android:layout_weight="1"-->
+<!--                      android:orientation="vertical"-->
+<!--                      android:weightSum="2">-->
+
+<!--                        <LinearLayout-->
+<!--                          android:layout_width="match_parent"-->
+<!--                          android:layout_height="match_parent"-->
+<!--                          android:layout_weight="0.5"-->
+<!--                          android:orientation="vertical"-->
+<!--                          android:padding="13dp">-->
+<!--                            <ImageView-->
+<!--                              android:id="@+id/iv_happy"-->
+<!--                              android:layout_width="match_parent"-->
+<!--                              android:layout_height="wrap_content"-->
+<!--                              app:srcCompat="@drawable/happy" />-->
+
+<!--                        </LinearLayout>-->
+
+<!--                        <LinearLayout-->
+<!--                          android:layout_width="match_parent"-->
+<!--                          android:layout_height="match_parent"-->
+<!--                          android:layout_weight="1.5"-->
+<!--                          android:orientation="vertical">-->
+
+<!--                            <TextView-->
+<!--                              android:id="@+id/nyaman2"-->
+<!--                              android:layout_width="match_parent"-->
+<!--                              android:layout_height="match_parent"-->
+<!--                              android:layout_weight="1"-->
+<!--                              android:gravity="center"-->
+<!--                              android:text="Happy"-->
+<!--                              android:textSize="12sp" />-->
+
+<!--                        </LinearLayout>-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+
+<!--                LAMA-->
+
+
+<!-- BARU-->
+
+
+
+                <LinearLayout
+                    android:id="@+id/linear_second"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/linear_sick"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical"
+                            android:padding="7dp">
+
+
+                            <ImageView
+                                android:id="@+id/iv_sick"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/sick_before" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/sick"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Sick"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_notfit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical"
+                            android:padding="7dp">
+
+                            <ImageView
+                                android:id="@+id/iv_not_fit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/notfit_before" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/notfit"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Not Fit"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_healthy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical"
+                            android:padding="7dp">
+
+                            <ImageView
+                                android:id="@+id/iv_healthy"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/healthy_before" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/healthy"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Healthy"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+<!--      BARU-->
+
+
+                <!-- BARU2-->
+
+
+                <LinearLayout
+                    android:id="@+id/linear_third"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/linear_wfs"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical"
+                            android:padding="7dp">
+
+                            <ImageView
+                                android:id="@+id/iv_wfs"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/workfromsatelite_before" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/satu"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/wfs"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Work from Satellite"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_wfh"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical"
+                            android:padding="7dp">
+
+                            <ImageView
+                                android:id="@+id/iv_wfh"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/workformhome_before" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/wfh"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Work from Home"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_wfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical"
+                            android:padding="7dp">
+
+                            <ImageView
+                                android:id="@+id/iv_wfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/workfromoffice_before" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/wfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Work from Office"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--      BARU2-->
+
+                <!--      BARU3-->
+            <LinearLayout
+                android:id="@+id/linear_forth"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:visibility="gone">
+
+<!--                <Spinner-->
+<!--                    android:id="@+id/spinner_office_checkin"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+<!--                </Spinner>-->
+
+                <Button
+                    android:id="@+id/btn_show_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Choose Office"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@color/green_pegadaian_color">
+                </Button>
+
+            </LinearLayout>
+                <!--      BARU3-->
+
+
+                <!--      BARU4-->
+                <LinearLayout
+                    android:id="@+id/linear_fifth"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/linear_publictrans"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical"
+                            android:padding="7dp">
+
+                            <ImageView
+                                android:id="@+id/iv_publictrans"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/publictransport_before" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/publictrans"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Public Transportation"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_owntrans"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical"
+                            android:padding="7dp">
+
+                            <ImageView
+                                android:id="@+id/iv_owntrans"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/owntransport_before" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/owntrans"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Own Transportation"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_officetrans"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:orientation="vertical"
+                            android:padding="7dp">
+
+                            <ImageView
+                                android:id="@+id/iv_officetrans"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/officetransport_before" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/officetrans"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Office Transportation"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--      BARU4-->
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

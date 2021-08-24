@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Gradle: com.trello:rxlifecycle-android:1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5075496c7e9e59ee3f20cd1f1542f61b/jetified-rxlifecycle-android-1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5075496c7e9e59ee3f20cd1f1542f61b/jetified-rxlifecycle-android-1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5075496c7e9e59ee3f20cd1f1542f61b/jetified-rxlifecycle-android-1.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/64a28341e99b2e719496ddfc9384a29d/jetified-rxlifecycle-android-1.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9fcb21d4300b985b5a8a99e38c37e0d7/jetified-rxlifecycle-android-1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9fcb21d4300b985b5a8a99e38c37e0d7/jetified-rxlifecycle-android-1.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9fcb21d4300b985b5a8a99e38c37e0d7/jetified-rxlifecycle-android-1.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/25e0d2149bdf915e6aaba940bd43e2fd/jetified-rxlifecycle-android-1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/25e0d2149bdf915e6aaba940bd43e2fd/jetified-rxlifecycle-android-1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/25e0d2149bdf915e6aaba940bd43e2fd/jetified-rxlifecycle-android-1.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.trello/rxlifecycle-android/1.0/7651be8aea76092fe0f745eb5731f6ecbd135383/rxlifecycle-android-1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.trello/rxlifecycle-android/1.0/93c263bc8dce75549a368ae266a61746ed02ab67/rxlifecycle-android-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

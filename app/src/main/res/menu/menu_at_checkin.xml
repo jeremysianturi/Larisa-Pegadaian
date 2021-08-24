@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/make_confirmation"
+        android:orderInCategory="300"
+        android:title="Presence Confirmation"
+        android:iconTint="@color/white"
+        android:icon="@drawable/add"
+        app:showAsAction="">
+    </item>
+
+<!--    <item-->
+<!--        android:id="@+id/list_not_approve"-->
+<!--        android:orderInCategory="300"-->
+<!--        android:title="Confirmation List Approve!!"-->
+<!--        android:iconTint="@color/white"-->
+<!--        android:icon="@drawable/file"-->
+<!--        app:showAsAction="">-->
+<!--    </item>-->
+
+<!--    <item-->
+<!--        android:id="@+id/list_confirmation"-->
+<!--        android:orderInCategory="300"-->
+<!--        android:title="Confirmation list"-->
+<!--        android:iconTint="@color/white"-->
+<!--        android:icon="@drawable/file"-->
+<!--        app:showAsAction="">-->
+<!--    </item>-->
+</menu>

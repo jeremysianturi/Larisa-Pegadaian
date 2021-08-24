@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="id.co.pegadaian.diarium.controller.inbox.InboxActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/list_inbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#F4F4F4"
+            android:dividerHeight="1.0dp" />
+
+        <TextView
+            android:id="@+id/tvNull"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="NO DATA"
+            android:textSize="30sp" />
+    </LinearLayout>
+</LinearLayout>

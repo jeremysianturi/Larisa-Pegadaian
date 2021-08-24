@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "892696066421",
+    "firebase_url": "https://larisa-pegadaian.firebaseio.com",
+    "project_id": "larisa-pegadaian",
+    "storage_bucket": "larisa-pegadaian.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892696066421:android:3944258d14bd86cc60fb3c",
+        "android_client_info": {
+          "package_name": "id.co.pegadaian.diarium"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892696066421-9t42h0h74o54pa6qj1sggnjtqvtnv54c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.co.pegadaian.diarium",
+            "certificate_hash": "b094ac8a22645fbcab8b69849e2bb6f05975cbc1"
+          }
+        },
+        {
+          "client_id": "892696066421-lleorepk8t7grpklasc5ld9q8o1f2cjn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOoS2SZR5ncZt6vYzJfvWasstodXwDFpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892696066421-lleorepk8t7grpklasc5ld9q8o1f2cjn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "892696066421-ctucusdusdafd3ktk7uadbdtrc2r61hl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "id.co.pegadaian.diarium"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319749469938:android:cdd0ed79752f3c5665826b",
+        "android_client_info": {
+          "package_name": "id.co.pegadaian.diarium"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "319749469938-r3t83pa9vo503k63i5gp7aitl5gvfbdo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.co.pegadaian.diarium",
+            "certificate_hash": "b094ac8a22645fbcab8b69849e2bb6f05975cbc1"
+          }
+        },
+        {
+          "client_id": "319749469938-af94crcg462c7mikmsienhp2tfe8hm3l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhjAO3DIzPktm0JtajYJXhHKuDS73ARyM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "319749469938-af94crcg462c7mikmsienhp2tfe8hm3l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "319749469938-9hcqg93h6ifu92oaookni7vvhc1iub42.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "id.co.telkomsigma.Diarium"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

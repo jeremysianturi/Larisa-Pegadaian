@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="Gradle: com.thoughtbot:expandablerecyclerview:1.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/602cac2a014d526f44598748c2e29ac5/jetified-expandablerecyclerview-1.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/602cac2a014d526f44598748c2e29ac5/jetified-expandablerecyclerview-1.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/602cac2a014d526f44598748c2e29ac5/jetified-expandablerecyclerview-1.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/81c8e0daf99102259f049cd05ce38710/jetified-expandablerecyclerview-1.3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/81c8e0daf99102259f049cd05ce38710/jetified-expandablerecyclerview-1.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/81c8e0daf99102259f049cd05ce38710/jetified-expandablerecyclerview-1.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a2b6df3aeac7a2d2a3d5a1511f2ef6da/jetified-expandablerecyclerview-1.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a2b6df3aeac7a2d2a3d5a1511f2ef6da/jetified-expandablerecyclerview-1.3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a2b6df3aeac7a2d2a3d5a1511f2ef6da/jetified-expandablerecyclerview-1.3/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.thoughtbot/expandablerecyclerview/1.3/d7401669f801f1d39ed61447acd0b73a767f8516/expandablerecyclerview-1.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.thoughtbot/expandablerecyclerview/1.3/5b7ece86ec88ea00841aa4ccfb127f8ae1798709/expandablerecyclerview-1.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pesan"
+    android:weightSum="2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp">
+    <CheckBox
+        android:id="@+id/checkBoxAnswer"
+        android:layout_weight="1.8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/tvAnswer"
+        android:layout_weight="0.2"
+        android:gravity="center|left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Jawabanya Adalah"
+        android:textSize="14dp" />
+</LinearLayout>

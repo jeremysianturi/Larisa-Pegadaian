@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00AB4E</color>
+    <color name="colorPrimaryDark">#00AB4E</color>
+    <color name="colorAccent">#00AB4E</color>
+<!--    <color name="colorAccent">#00AB4E</color>-->
+
+    <color name="red">#ce1000</color>
+    <color name="semitransparent">#9A000000</color>
+    <color name="grey">#CECECECE</color>
+    <color name="black">#000000</color>
+
+
+    <color name="tabIndicator">#00AB4E</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#fff</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="selected">#a8cf45</color>
+    <color name="unselected">#ff8cae3b</color>
+
+
+    <color name="light_green">#32CD32</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green_pale">#d1ffd2</color>
+
+    <color name="skeleton_color">#dddddd</color>
+
+    <color name="green_pegadaian_color">#00AB4E</color>
+    <color name="blue_pegadaian_color">#33AFFF</color>
+
+</resources>

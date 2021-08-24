@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context=".controller.home.main_menu.mydevelopment.mytraining.KuisionerLMSActivity">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:cardBackgroundColor="#ffffff"
+      app:cardCornerRadius="5dp">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+          android:id="@+id/layout_next"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right"
+          android:orientation="horizontal"
+          android:padding="5dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+              android:id="@+id/tvpertanyaanKe"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="left"
+              android:text="Test"
+              android:textSize="16sp" />
+
+          </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="5dp">
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <ImageView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="1.8"
+              app:srcCompat="@drawable/information" />
+
+            <ImageView
+              android:id="@+id/ivTestImage"
+              android:layout_weight="0.2"
+              android:layout_width="match_parent"
+              android:layout_height="30dp"/>
+
+<!--            <TextView-->
+<!--              android:id="@+id/tvTitle"-->
+<!--              android:layout_width="match_parent"-->
+<!--              android:layout_height="wrap_content"-->
+<!--              android:layout_weight="0.2"-->
+<!--              android:gravity="top|left"-->
+<!--              android:text="Isi pertanyaan"-->
+<!--              android:textSize="14sp" />-->
+
+          </LinearLayout>
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <ImageView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_weight="1.8"
+              app:srcCompat="@drawable/attach" />
+
+
+            <TextView
+              android:id="@+id/tvText"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="0.2"
+              android:gravity="top|left"
+              android:text="Isi pertanyaan"
+              android:textSize="14sp" />
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+          <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:text="Choose the correct answer below:" />
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/layout_fragment"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="20dp"
+          android:gravity="bottom"
+          android:orientation="vertical"
+          android:padding="5dp">
+
+          <LinearLayout
+            android:id="@+id/lay_esay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+              android:id="@+id/etEsay"
+              android:layout_width="match_parent"
+              android:layout_height="200dp"
+              android:background="@drawable/bg_edittext"
+              android:ems="10"
+              android:gravity="top"
+              android:hint="Input your answer"
+              android:inputType="textMultiLine"
+              android:padding="5dp"
+              android:textSize="14sp" />
+          </LinearLayout>
+
+          <LinearLayout
+            android:id="@+id/lay_multiple_choice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:orientation="vertical">
+            <ListView
+              android:id="@+id/listMultipleChoice"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+          </LinearLayout>
+
+          <LinearLayout
+            android:id="@+id/lay_true_false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:orientation="vertical">
+            <RadioGroup
+              android:id="@+id/radioGroupTF"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <RadioButton
+                android:id="@+id/radioTrue"
+                android:text="True"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+              <RadioButton
+                android:id="@+id/radioFalse"
+                android:text="False"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            </RadioGroup>
+
+          </LinearLayout>
+
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:orientation="horizontal">
+            <Button
+              android:id="@+id/btnAction"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="10dp"
+              android:background="@drawable/button"
+              android:text="Next"
+              android:textColor="#ffffff" />
+          </LinearLayout>
+
+        </LinearLayout>
+      </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+  </LinearLayout>
+</LinearLayout>

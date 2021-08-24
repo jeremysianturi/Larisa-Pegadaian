@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <LinearLayout
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:weightSum="2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+
+    <LinearLayout
+      android:gravity="center"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1.5">
+
+      <ImageView
+        android:src="@drawable/ic_mytask"
+        android:id="@+id/image_pay1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+      android:gravity="center"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="0.5">
+
+      <TextView
+        android:textColor="@color/black"
+        android:paddingBottom="3dp"
+        android:text="Financial Analisys Course 2020"
+        android:textSize="14sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text11"/>
+      <TextView
+        android:paddingTop="2dp"
+        android:text="Rp. 25.000.000"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text21"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+
+<!--  ============================ dibawah hanya contoh ==========================-->
+
+  <LinearLayout
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:weightSum="2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+
+    <LinearLayout
+      android:gravity="center"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1.5">
+
+      <ImageView
+        android:src="@drawable/ic_mytask"
+        android:id="@+id/image_pay2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+      android:gravity="center"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="0.5">
+
+      <TextView
+        android:textColor="@color/black"
+        android:paddingBottom="3dp"
+        android:text="Financial Analisys Course 2020"
+        android:textSize="14sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text12"/>
+      <TextView
+        android:paddingTop="2dp"
+        android:text="Rp. 25.000.000"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text22"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+  <LinearLayout
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:weightSum="2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+
+    <LinearLayout
+      android:gravity="center"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1.5">
+
+      <ImageView
+        android:src="@drawable/ic_mytask"
+        android:id="@+id/image_pay3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+      android:gravity="center"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="0.5">
+
+      <TextView
+        android:textColor="@color/black"
+        android:paddingBottom="3dp"
+        android:text="Financial Analisys Course 2020"
+        android:textSize="14sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text13"/>
+      <TextView
+        android:paddingTop="2dp"
+        android:text="Rp. 25.000.000"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text23"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+  <LinearLayout
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:weightSum="2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+
+    <LinearLayout
+      android:gravity="center"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1.5">
+
+      <ImageView
+        android:src="@drawable/ic_mytask"
+        android:id="@+id/image_pay4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+      android:gravity="center"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="0.5">
+
+      <TextView
+        android:textColor="@color/black"
+        android:paddingBottom="3dp"
+        android:text="Financial Analisys Course 2020"
+        android:textSize="14sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text14"/>
+      <TextView
+        android:paddingTop="2dp"
+        android:text="Rp. 25.000.000"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text24"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+  <LinearLayout
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:weightSum="2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+
+    <LinearLayout
+      android:gravity="center"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1.5">
+
+      <ImageView
+        android:src="@drawable/ic_mytask"
+        android:id="@+id/image_pay5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+      android:gravity="center"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="0.5">
+
+      <TextView
+        android:textColor="@color/black"
+        android:paddingBottom="3dp"
+        android:text="Financial Analisys Course 2020"
+        android:textSize="14sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text15"/>
+      <TextView
+        android:paddingTop="2dp"
+        android:text="Rp. 25.000.000"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text25"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+  <LinearLayout
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:weightSum="2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+
+    <LinearLayout
+      android:gravity="center"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1.5">
+
+      <ImageView
+        android:src="@drawable/ic_mytask"
+        android:id="@+id/image_pay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+      android:gravity="center"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_weight="0.5">
+
+      <TextView
+        android:textColor="@color/black"
+        android:paddingBottom="3dp"
+        android:text="Financial Analisys Course 2020"
+        android:textSize="14sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text1"/>
+      <TextView
+        android:paddingTop="2dp"
+        android:text="Rp. 25.000.000"
+        android:textSize="12sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text2"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+
+</LinearLayout>

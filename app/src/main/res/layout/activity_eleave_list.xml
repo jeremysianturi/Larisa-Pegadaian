@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.home.main_menu.eleave.EleaveList">
+
+    <Button
+        android:id="@+id/btn_gotoApproval_eleave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Go to Approval"
+        android:background="@drawable/button"
+        android:textColor="@color/white"
+        android:layout_margin="4dp"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ll_search_eleave">
+    </Button>
+
+    <LinearLayout
+        android:id="@+id/ll_search_eleave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="15dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ll_btn_eleave"
+        app:layout_constraintTop_toBottomOf="@id/btn_gotoApproval_eleave">
+
+        <LinearLayout
+            android:id="@+id/ll_left_eleave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.5">
+
+            <TextView
+                android:id="@+id/title_filter_date_eleave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status filter"
+                android:gravity="center_horizontal">
+            </TextView>
+
+            <TextView
+                android:id="@+id/spinner_filter_status_eleave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/textview_dropdown"
+                android:gravity="center_horizontal">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_right_surattugas_eleave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.5"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/title_filter_status_eleave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Choose end date"
+                android:gravity="center_horizontal">
+            </TextView>
+
+            <TextView
+                android:id="@+id/spinner_filter_enddate_eleave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                style="@style/textview_dropdown">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn_eleave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_search_eleave"
+        app:layout_constraintBottom_toTopOf="@id/rv_eleave">
+
+        <Button
+            android:id="@+id/btn_filter_eleave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textColor="@color/white"
+            android:background="@drawable/button"
+            android:layout_weight="0.5"
+            android:layout_margin="4dp">
+        </Button>
+
+        <Button
+            android:id="@+id/btn_reset_eleave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:textColor="@color/white"
+            android:background="@drawable/button_red"
+            android:layout_weight="0.5"
+            android:layout_margin="4dp">
+        </Button>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_eleave"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:layout_margin="4dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_btn_eleave"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/no_data_eleave_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:layout_margin="4dp"
+        android:text="NO DATA"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:visibility="gone"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_btn_eleave"
+        app:layout_constraintBottom_toBottomOf="parent">
+    </TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

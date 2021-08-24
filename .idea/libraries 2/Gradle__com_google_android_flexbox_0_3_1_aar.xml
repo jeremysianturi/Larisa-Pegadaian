@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android:flexbox:0.3.1@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bba9b034fbe1c6f7be1ed5cc0e1cbf8a/jetified-flexbox-0.3.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0aac072bf4b197a5300c3e5ab16a705c/jetified-flexbox-0.3.1/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/58ee6be4612857558d42c2f9d62ef85b/jetified-flexbox-0.3.1/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bba9b034fbe1c6f7be1ed5cc0e1cbf8a/jetified-flexbox-0.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bba9b034fbe1c6f7be1ed5cc0e1cbf8a/jetified-flexbox-0.3.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bba9b034fbe1c6f7be1ed5cc0e1cbf8a/jetified-flexbox-0.3.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0aac072bf4b197a5300c3e5ab16a705c/jetified-flexbox-0.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0aac072bf4b197a5300c3e5ab16a705c/jetified-flexbox-0.3.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0aac072bf4b197a5300c3e5ab16a705c/jetified-flexbox-0.3.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/58ee6be4612857558d42c2f9d62ef85b/jetified-flexbox-0.3.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/58ee6be4612857558d42c2f9d62ef85b/jetified-flexbox-0.3.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/58ee6be4612857558d42c2f9d62ef85b/jetified-flexbox-0.3.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android/flexbox/0.3.1/e13be86902d00b29b80a9311c16dc85e6a0e290f/flexbox-0.3.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

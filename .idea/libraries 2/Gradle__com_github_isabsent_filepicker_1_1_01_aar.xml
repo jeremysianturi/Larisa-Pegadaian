@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.isabsent:filepicker:1.1.01@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cf54dd0d062395ed08a2bdeead4f044b/jetified-filepicker-1.1.01/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cf54dd0d062395ed08a2bdeead4f044b/jetified-filepicker-1.1.01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cf54dd0d062395ed08a2bdeead4f044b/jetified-filepicker-1.1.01/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dfcf816b1f3737c24f4908d35588cb49/jetified-filepicker-1.1.01/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dfcf816b1f3737c24f4908d35588cb49/jetified-filepicker-1.1.01/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dfcf816b1f3737c24f4908d35588cb49/jetified-filepicker-1.1.01/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a3b8f98cd0d8ef03e5322615c78cc1fe/jetified-filepicker-1.1.01/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a3b8f98cd0d8ef03e5322615c78cc1fe/jetified-filepicker-1.1.01/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a3b8f98cd0d8ef03e5322615c78cc1fe/jetified-filepicker-1.1.01/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.isabsent/filepicker/1.1.01/b0820ff79aba07f37839fdd953b080d1c17fa0b9/filepicker-1.1.01-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.isabsent/filepicker/1.1.01/55a323ad4e411f41645804523859fc81213d329c/filepicker-1.1.01-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

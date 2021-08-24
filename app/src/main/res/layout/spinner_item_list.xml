@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/tv_spinner_add_datatype"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:textSize="14sp"
+  android:paddingTop="3dp"
+  android:paddingBottom="3dp"
+  android:paddingStart="5dp"
+  android:textColor="@color/black"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+</TextView>

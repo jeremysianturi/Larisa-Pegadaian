@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:padding="15dp"
+    android:layout_marginTop="10dp"
+    android:layout_gravity="top|center"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@drawable/border_shadow_round"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:gravity="top|left"
+        android:layout_marginTop="10dp"
+        android:text="Meeting Smart Office Inalum"/>
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:hint="Add Description"
+        android:textSize="13sp"
+        android:inputType="textMultiLine"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/submit"
+        android:text="submit"
+        android:textColor="#FFF"
+        android:background="@drawable/button"/>
+
+
+
+
+</LinearLayout>

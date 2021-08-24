@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.home.main_menu.personal_data.familydata.FamilyDataOnly">
+
+    <id.co.pegadaian.diarium.util.NonScrollListView
+        android:id="@+id/lv_data_family_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edittext"
+        android:padding="5dp"
+        android:layout_margin="4dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </id.co.pegadaian.diarium.util.NonScrollListView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
