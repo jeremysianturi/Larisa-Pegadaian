@@ -81,7 +81,7 @@ import id.co.pegadaian.diarium.model.MyPostingModel;
 import id.co.pegadaian.diarium.model.SliderItem;
 import id.co.pegadaian.diarium.util.ExpandableHeightGridView;
 import id.co.pegadaian.diarium.util.UserSessionManager;
-import id.co.pegadaian.diarium.util.qiscus.ui.activity.QiscusChatActivity;
+//import id.co.pegadaian.diarium.util.qiscus.ui.activity.QiscusChatActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -347,11 +347,11 @@ public class HomeFragment extends Fragment {
                         break;
                     case "FAQ (Chatbot)":
 //                        Toast.makeText(getActivity(), "not available", Toast.LENGTH_SHORT).show();
-                        Intent h = new Intent(getActivity(), QiscusChatActivity.class);
-                        System.out.println(session.getUserNIK()+"@diarium.co.id"+ "NIKNYA");
-                        h.putExtra("name","Dexy-Kiwari");
-                        h.putExtra("email",session.getUserNIK()+"@diarium.co.id");
-                        startActivity(h);
+//                        Intent h = new Intent(getActivity(), QiscusChatActivity.class);
+//                        System.out.println(session.getUserNIK()+"@diarium.co.id"+ "NIKNYA");
+//                        h.putExtra("name","Dexy-Kiwari");
+//                        h.putExtra("email",session.getUserNIK()+"@diarium.co.id");
+//                        startActivity(h);
                         break;
                     case "Community":
 //                        Toast.makeText(getActivity(), "This menu not available in trial mode", Toast.LENGTH_SHORT).show();

@@ -3,7 +3,7 @@ package id.co.pegadaian.diarium.util;
 import android.app.Application;
 
 //import com.element.camera.ElementFaceSDK;
-import com.qiscus.sdk.Qiscus;
+//import com.qiscus.sdk.Qiscus;
 
 import id.co.pegadaian.diarium.util.qiscus.util.Constant;
 
@@ -12,7 +12,7 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
 //        ElementFaceSDK.initSDK(this);
-        Qiscus.init(this, Constant.QISCUS_APP_ID);
+//        Qiscus.init(this, Constant.QISCUS_APP_ID);
 
     }
 }

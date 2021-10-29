@@ -37,6 +37,7 @@ import id.co.pegadaian.diarium.util.UserSessionManager
 import id.co.pegadaian.diarium.util.element.ProgressDialogHelper
 import id.co.pegadaian.diarium.util.photo.PhotoUtil
 import id.co.pegadaian.diarium.util.photo.TakePhotoUtil
+import id.co.pegadaian.diarium.util.zaimUtils.ZaimUtils2021
 import kotlinx.android.synthetic.main.activity_create_eleave.*
 import kotlinx.android.synthetic.main.activity_presence_confirmation.*
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -50,39 +51,39 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 
-class CreateEleave : AppCompatActivity(),View.OnClickListener {
+class CreateEleave : AppCompatActivity(), View.OnClickListener {
 
     private val tags = CreateEleave::class.java.simpleName
 
     // initialize
-    private lateinit var viewModel : CreateEleaveModel
-    private lateinit var session : UserSessionManager
-    private lateinit var progressDialogHelper : ProgressDialogHelper
+    private lateinit var viewModel: CreateEleaveModel
+    private lateinit var session: UserSessionManager
+    private lateinit var progressDialogHelper: ProgressDialogHelper
 
     // for date picker
-    private lateinit var dateEleave : DatePickerDialog.OnDateSetListener
-    private var myCalendar : Calendar = Calendar.getInstance()
-    private lateinit var tgl : String
+    private lateinit var dateEleave: DatePickerDialog.OnDateSetListener
+    private var myCalendar: Calendar = Calendar.getInstance()
+    private lateinit var tgl: String
 
     // for spinner eleave type
     private val listDataEleaveType = ArrayList<DataSpinnerEleave>()
-    private lateinit var listCode : ArrayList<String>
-    private lateinit var dataEleaveType : DataSpinnerEleave
-    private var strListType : String? = null
-    private var typeChosen : String? = ""
-    private var codeCuti : String? = ""
+    private lateinit var listCode: ArrayList<String>
+    private lateinit var dataEleaveType: DataSpinnerEleave
+    private var strListType: String? = null
+    private var typeChosen: String? = ""
+    private var codeCuti: String? = ""
 
     // for spinner cuti besar eleave type
     private val listDataEleaveTypeCutiBesar = ArrayList<DataSpinnerEleaveCutiBesar>()
-    private lateinit var listCodeCutiBesar : ArrayList<String>
-    private lateinit var dataEleaveTypeCutiBesar : DataSpinnerEleaveCutiBesar
-    private var strListTypeCutiBesar : String? = null
-    private var typeChosenCutiBesar : String? = ""
+    private lateinit var listCodeCutiBesar: ArrayList<String>
+    private lateinit var dataEleaveTypeCutiBesar: DataSpinnerEleaveCutiBesar
+    private var strListTypeCutiBesar: String? = null
+    private var typeChosenCutiBesar: String? = ""
 
     // for evidence
     private var bitmapPhoto: Bitmap? = null
     private var img_data: String? = null
-    private  var mCurrentPhotoPath: String? = null
+    private var mCurrentPhotoPath: String? = null
     private val REQUEST_ID_MULTIPLE_PERMISSIONS = 1
     private val CAPTURE_PHOTO = 2
     private val CAPTURE_GALLERY = 3
@@ -93,14 +94,13 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
 
     // list for chip bubble eleave date
 //    val listDates: MutableList<String> = ArrayList()
-    private lateinit var listDate : ArrayList<String>
-    private lateinit var listDateShow : ArrayList<String>
+    private lateinit var listDate: ArrayList<String>
+    private lateinit var listDateShow: ArrayList<String>
 //    private lateinit var listDateFromRangeDatePicker : ArrayList<String>
 
 
-
     // checkbox
-    var checkBoxTunjangan : Boolean = false
+    var checkBoxTunjangan: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -111,9 +111,12 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
 
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         setTitle("Form Permohonan Cuti")
-        viewModel = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())[CreateEleaveModel::class.java]
+        viewModel = ViewModelProvider(
+            this,
+            ViewModelProvider.NewInstanceFactory()
+        )[CreateEleaveModel::class.java]
 
-        val sdf : SimpleDateFormat = SimpleDateFormat("yyyy-MM-dd")
+        val sdf: SimpleDateFormat = SimpleDateFormat("yyyy-MM-dd")
         tgl = sdf.format(Date())
 
 
@@ -129,14 +132,17 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
         val listDateFromRangeDatePickerShow = intent.getStringArrayListExtra("listDateShow")
         val nameTipeCutiIntent = intent.getStringExtra("nameTipeCutiFromRangeDatePicker")
         strListType = intent.getStringExtra("codeTipeCutiFromRangeDatePicker")
-        Log.d(tags, "check value listDateFromRangeDatePicker : $listDateFromRangeDatePicker \n " +
-                "list show : $listDateFromRangeDatePickerShow" +
-                " & name tipe cuti : $nameTipeCutiIntent" +
-                "str list type value menghilang : $strListType")
-        if (listDateFromRangeDatePicker!=null){
+        Log.d(
+            tags, "check value listDateFromRangeDatePicker : $listDateFromRangeDatePicker \n " +
+                    "list show : $listDateFromRangeDatePickerShow" +
+                    " & name tipe cuti : $nameTipeCutiIntent" +
+                    "str list type value menghilang : $strListType"
+        )
+        if (listDateFromRangeDatePicker != null) {
             listDate = listDateFromRangeDatePicker
             setVisibleSecondLl()
-            tv_pc_date_eleave.text = "${listDateFromRangeDatePickerShow[0]} until ${listDateFromRangeDatePickerShow[listDateFromRangeDatePickerShow.size-1]}"
+            tv_pc_date_eleave.text =
+                "${listDateFromRangeDatePickerShow[0]} until ${listDateFromRangeDatePickerShow[listDateFromRangeDatePickerShow.size - 1]}"
             iv_datepicker_eleave.visibility = View.GONE
             spinner_jenis_konfirmasi_eleave.text = nameTipeCutiIntent
             ll_after_date_havevalue.visibility = View.VISIBLE
@@ -170,7 +176,7 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
     }
 
     // get data spinner
-    private fun getDataEleaveType(){
+    private fun getDataEleaveType() {
 
         val baseUrl = session.serverURLHCIS
         val token = session.token
@@ -187,13 +193,19 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
                     val name = model[i].typeName
                     val code = model[i].typeCode
 
-                    Log.d(tags, "check value getSpinner status eleave: \n model size : ${model.size} \n name : $name")
+                    Log.d(
+                        tags,
+                        "check value getSpinner status eleave: \n model size : ${model.size} \n name : $name"
+                    )
 
                     dataEleaveType = DataSpinnerEleave(intResponse, name, code)
                     listDataEleaveType.add(dataEleaveType)
                     listCode.add(name)
 
-                    Log.d(tags, "list status number : ${listDataEleaveType} \n list status : $listCode \n list code : $code")
+                    Log.d(
+                        tags,
+                        "list status number : ${listDataEleaveType} \n list status : $listCode \n list code : $code"
+                    )
                 }
             }
         })
@@ -201,7 +213,7 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
 
 
     // get data spinner cuti besar
-    private fun getDataEleaveTypeCutiBesar(){
+    private fun getDataEleaveTypeCutiBesar() {
 
         val baseUrl = session.serverURLHCIS
         val token = session.token
@@ -221,14 +233,19 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
                     val name = model[i].typeName
                     val code = model[i].typeCode
 
-                    Log.d(tags, "check value getSpinner status eleave: \n model size : ${model.size} \n name : $name")
+                    Log.d(
+                        tags,
+                        "check value getSpinner status eleave: \n model size : ${model.size} \n name : $name"
+                    )
 
                     dataEleaveTypeCutiBesar = DataSpinnerEleaveCutiBesar(intResponse, name, code)
                     listDataEleaveTypeCutiBesar.add(dataEleaveTypeCutiBesar)
                     listCodeCutiBesar.add(name)
 
-                    Log.d(tags, "list status number : ${listDataEleaveTypeCutiBesar} \n " +
-                            "list status : $listCodeCutiBesar \n list code : $code")
+                    Log.d(
+                        tags, "list status number : ${listDataEleaveTypeCutiBesar} \n " +
+                                "list status : $listCodeCutiBesar \n list code : $code"
+                    )
                 }
             }
         })
@@ -236,8 +253,7 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
 
 
     //  filter date
-    private fun popUpDateConfirmation(){
-
+    private fun popUpDateConfirmation() {
         dateEleave = OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
             myCalendar.set(Calendar.YEAR, year)
             myCalendar.set(Calendar.MONTH, monthOfYear)
@@ -248,17 +264,23 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
         iv_datepicker_eleave.setOnClickListener(this)
     }
 
-    private fun updateLabelDateConfirmation(){
+    private fun updateLabelDateConfirmation() {
         val myFormat = "yyyy-MM-dd"
         val sdf = SimpleDateFormat(myFormat, Locale.US)
         tv_pc_date_eleave.text = sdf.format(myCalendar.time)
 
-        listDate.add("'${sdf.format(myCalendar.time)}'")
-        listDateShow.add(sdf.format(myCalendar.time))
+        val newValue = sdf.format(myCalendar.time)
+        if (!listDateShow.contains(newValue)) {
+            listDate.add("'${sdf.format(myCalendar.time)}'")
+            listDateShow.add(sdf.format(myCalendar.time))
+        }else {
+            Toast.makeText(this,"anda sudah memilih tanggal : $newValue",Toast.LENGTH_SHORT).show()
+        }
+
 
         Log.d(tags, "check value list date on update lable : ${listDate.size}")
 
-        if (listDate.size < 100){
+        if (listDate.size < 100) {
 
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Add date E-leave")
@@ -266,35 +288,47 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
             builder.setCancelable(false)
 
             builder.setPositiveButton("Add More") { dialog, which ->
-                DatePickerDialog(this, dateEleave, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show()
+                DatePickerDialog(
+                    this,
+                    dateEleave,
+                    myCalendar.get(Calendar.YEAR),
+                    myCalendar.get(Calendar.MONTH),
+                    myCalendar.get(Calendar.DAY_OF_MONTH)
+                ).show()
+                val dateResult = ZaimUtils2021.convertListToString(listDateShow)
+//                Toast.makeText(this, "Anda Memilih :  $dateResult", Toast.LENGTH_SHORT).show()
+
             }
             builder.setNegativeButton("No") { dialog, which ->
                 iv_datepicker_eleave.visibility = View.GONE
                 ll_after_date_havevalue.visibility = View.VISIBLE
 
-                var listDateShowEdit = ""
-                for (a in 0 until listDateShow.size) {
-                    if (a == listDateShow.size-1){
-                        listDateShowEdit += listDateShow[a]
-                    } else {
-                        listDateShowEdit += "${listDateShow[a]} , "
-                    }
+//                var listDateShowEdit = ""
+//                for (a in 0 until listDateShow.size) {
+//                    if (a == listDateShow.size - 1) {
+//                        listDateShowEdit += listDateShow[a]
+//                    } else {
+//                        listDateShowEdit += "${listDateShow[a]} , "
+//                    }
+//
+//                }
 
-                }
-                Log.d(tags,"check value listdateshowedit : $listDateShowEdit")
-                tv_pc_date_eleave.text = listDateShowEdit
+                val dateResults = ZaimUtils2021.convertListToString(listDateShow)
+                Log.d(tags, "check value listdateshowedit : $dateResults")
+                tv_pc_date_eleave.text = dateResults
             }
             builder.show()
 
         } else {
-            Toast.makeText(this, "You've reach your maximum date selection", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "You've reach your maximum date selection", Toast.LENGTH_SHORT)
+                .show()
             iv_datepicker_eleave.visibility = View.GONE
             tv_pc_date_eleave.text = listDateShow.toString()
             ll_after_date_havevalue.visibility = View.VISIBLE
         }
     }
 
-    private fun resetView(){
+    private fun resetView() {
         ll_after_date_havevalue.visibility = View.GONE
         listDateShow.clear()
         listDate.clear()
@@ -305,19 +339,19 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
         checkBoxTunjangan = false
     }
 
-    private fun setVisibilityTunjanganCheckbox(){
-        if (strListType.equals("CTBSR") || strListType.equals("CTTHN")){
+    private fun setVisibilityTunjanganCheckbox() {
+        if (strListType.equals("CTBSR") || strListType.equals("CTTHN")) {
             checkBox_tunjangan_eleave.visibility = View.VISIBLE
         } else {
             checkBox_tunjangan_eleave.visibility = View.GONE
         }
     }
 
-    private fun setVisibleSecondLl (){
+    private fun setVisibleSecondLl() {
         ll_afterchoose_jeniscuti.visibility = View.VISIBLE
     }
 
-    private fun setViewSpinnerForCutiBesar(){
+    private fun setViewSpinnerForCutiBesar() {
         // set the view
         tv_jenis_konfirmasi_eleave_cutibesar.visibility = View.VISIBLE
         spinner_jenis_konfirmasi_eleave_cutibesar.visibility = View.VISIBLE
@@ -327,7 +361,7 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
         Toast.makeText(this, "Please fill cuti besar type", Toast.LENGTH_LONG).show()
     }
 
-    private fun hideSpinnerForCutiBesar(){
+    private fun hideSpinnerForCutiBesar() {
         // set the view
         tv_jenis_konfirmasi_eleave_cutibesar.visibility = View.GONE
         spinner_jenis_konfirmasi_eleave_cutibesar.visibility = View.GONE
@@ -336,30 +370,52 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
     }
 
     // get all value
-    private fun getAllValue(){
+    private fun getAllValue() {
 
         val nik = session.userNIK
         val name = session.userFullName
         val buscd = session.userBusinessCode
         val date = listDate
-        Log.d(tags, "check value arraylist date eleave at getAllValue : ${date.size} \n value : $date")
-        Log.d(tags,"code cutinya cyinnn : $codeCuti")
+        Log.d(
+            tags,
+            "check value arraylist date eleave at getAllValue : ${date.size} \n value : $date"
+        )
+        Log.d(tags, "code cutinya cyinnn : $codeCuti")
         val jenisCuti = strListType
-        Log.d(tags,"jenis cutinya cyinnn : $jenisCuti")
+        Log.d(tags, "jenis cutinya cyinnn : $jenisCuti")
         val description = et_pc_deskripsi_eleave.text.toString()
 
         // for cuti besar
         val jenisCutiBesar = strListTypeCutiBesar
 
 
-        Log.d(tags, "test value check box tunjangan : $checkBoxTunjangan \n spinner code eleave : $strListType")
+        Log.d(
+            tags,
+            "test value check box tunjangan : $checkBoxTunjangan \n spinner code eleave : $strListType"
+        )
         val checkboxTunjanganString = checkBoxTunjangan.toString()
 
         Log.d(tags, "check value img_data : $img_data")
-        if (img_data==null || img_data==""){
-            submitOneEleaveWithoutEvidence(nik, buscd, jenisCuti, jenisCutiBesar, description, checkboxTunjanganString, date)
+        if (img_data == null || img_data == "") {
+            submitOneEleaveWithoutEvidence(
+                nik,
+                buscd,
+                jenisCuti,
+                jenisCutiBesar,
+                description,
+                checkboxTunjanganString,
+                date
+            )
         } else {
-            submitOneEleaveWithEvidence(nik, buscd, jenisCuti, jenisCutiBesar, description, checkboxTunjanganString, date)
+            submitOneEleaveWithEvidence(
+                nik,
+                buscd,
+                jenisCuti,
+                jenisCutiBesar,
+                description,
+                checkboxTunjanganString,
+                date
+            )
         }
     }
 
@@ -368,23 +424,32 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
         println(imageData + "kqn3kje")
         val imgBytesData: ByteArray
         imgBytesData = if (imageData == "" || imageData == null) {
-            Base64.decode("0",
-                    Base64.DEFAULT)
+            Base64.decode(
+                "0",
+                Base64.DEFAULT
+            )
         } else {
-            Base64.decode(imageData,
-                    Base64.DEFAULT)
+            Base64.decode(
+                imageData,
+                Base64.DEFAULT
+            )
         }
         val file: File
         val fileOutputStream: FileOutputStream
         try {
-            file = File.createTempFile("image", ".jpg", context.cacheDir)  // suffix diganti jadi ".jpg" biar jd jpg
+            file = File.createTempFile(
+                "image",
+                ".jpg",
+                context.cacheDir
+            )  // suffix diganti jadi ".jpg" biar jd jpg
             fileOutputStream = FileOutputStream(file)
         } catch (e: Exception) {
             e.printStackTrace()
             return null
         }
         val bufferedOutputStream = BufferedOutputStream(
-                fileOutputStream)
+            fileOutputStream
+        )
         try {
             bufferedOutputStream.write(imgBytesData)
         } catch (e: IOException) {
@@ -445,7 +510,8 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
                 actualWidth = maxWidth.toInt()
             }
         }
-        bmOptions.inSampleSize = imageUtil!!.calculateInSampleSize(bmOptions, actualWidth, actualHeight)
+        bmOptions.inSampleSize =
+            imageUtil!!.calculateInSampleSize(bmOptions, actualWidth, actualHeight)
         bmOptions.inJustDecodeBounds = false
         bmOptions.inDither = false
         bmOptions.inPurgeable = true
@@ -469,7 +535,12 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
         scaleMatrix.setScale(ratioX, ratioY, middleX, middleY)
         val canvas = Canvas(scaledBitmap!!)
         canvas.setMatrix(scaleMatrix)
-        canvas.drawBitmap(bmp, middleX - bmp.width / 2, middleY - bmp.height / 2, Paint(Paint.FILTER_BITMAP_FLAG))
+        canvas.drawBitmap(
+            bmp,
+            middleX - bmp.width / 2,
+            middleY - bmp.height / 2,
+            Paint(Paint.FILTER_BITMAP_FLAG)
+        )
         val exif: ExifInterface
         try {
             exif = ExifInterface(mCurrentPhotoPath)
@@ -486,7 +557,15 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
                 matrix.postRotate(270f)
                 Log.d("EXIF", "Exif: $orientation")
             }
-            scaledBitmap = Bitmap.createBitmap(scaledBitmap, 0, 0, scaledBitmap.width, scaledBitmap.height, matrix, true)
+            scaledBitmap = Bitmap.createBitmap(
+                scaledBitmap,
+                0,
+                0,
+                scaledBitmap.width,
+                scaledBitmap.height,
+                matrix,
+                true
+            )
         } catch (e: IOException) {
             println("TESNIHTES")
             e.printStackTrace()
@@ -499,12 +578,12 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
 //        img_ic.setVisibility(View.GONE);
     }
 
-    //
     private fun selectGallery(data: Intent?) {
         var scaledBitmap: Bitmap? = null
         val selectedImageUri = data?.data
         val projection = arrayOf(MediaStore.MediaColumns.DATA)
-        val cursorLoader = CursorLoader(applicationContext, selectedImageUri, projection, null, null, null)
+        val cursorLoader =
+            CursorLoader(applicationContext, selectedImageUri, projection, null, null, null)
         val cursor = cursorLoader.loadInBackground()
         val column_index = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.DATA)
         cursor.moveToFirst()
@@ -556,7 +635,12 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
         scaleMatrix.setScale(ratioX, ratioY, middleX, middleY)
         val canvas = Canvas(scaledBitmap!!)
         canvas.setMatrix(scaleMatrix)
-        canvas.drawBitmap(bmp, middleX - bmp.width / 2, middleY - bmp.height / 2, Paint(Paint.FILTER_BITMAP_FLAG))
+        canvas.drawBitmap(
+            bmp,
+            middleX - bmp.width / 2,
+            middleY - bmp.height / 2,
+            Paint(Paint.FILTER_BITMAP_FLAG)
+        )
         val exif: ExifInterface
         try {
             exif = ExifInterface(selectedImagePath)
@@ -573,7 +657,15 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
                 matrix.postRotate(270f)
                 Log.d("EXIF", "Exif: $orientation")
             }
-            scaledBitmap = Bitmap.createBitmap(scaledBitmap, 0, 0, scaledBitmap.width, scaledBitmap.height, matrix, true)
+            scaledBitmap = Bitmap.createBitmap(
+                scaledBitmap,
+                0,
+                0,
+                scaledBitmap.width,
+                scaledBitmap.height,
+                matrix,
+                true
+            )
         } catch (e: IOException) {
             e.printStackTrace()
         }
@@ -585,7 +677,11 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
         //img_ic.setVisibility(View.GONE);
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String?>, grantResults: IntArray) {
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String?>,
+        grantResults: IntArray
+    ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         println("Request Code :$requestCode $permissions $grantResults")
     }
@@ -598,7 +694,8 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
             if (items[item] == "Capture Photo") {
                 val permission = arrayOf(Manifest.permission.CAMERA)
                 if (ContextCompat.checkSelfPermission(applicationContext, permission[0])
-                        == PackageManager.PERMISSION_GRANTED) {
+                    == PackageManager.PERMISSION_GRANTED
+                ) {
                     val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
                     if (intent.resolveActivity(applicationContext.packageManager) != null) {
                         // Create the File where the photo should go
@@ -623,8 +720,10 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
                 //                    coba2
             } else if (items[item] == "Choose from Gallery") {
                 // Create intent to Open Image applications like Gallery, Google Photos
-                val galleryIntent = Intent(Intent.ACTION_PICK,
-                        MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+                val galleryIntent = Intent(
+                    Intent.ACTION_PICK,
+                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+                )
 
                 // Start the Intent
                 startActivityForResult(galleryIntent, CAPTURE_GALLERY)
@@ -641,11 +740,13 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
         //String imageFileName = username + "_";
         val imageFileName: String = userID + "_"
         val storageDir = Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES)
+            Environment.DIRECTORY_PICTURES
+        )
         println("masih jalan sampe sini")
-        val image = File.createTempFile(imageFileName,  /* prefix */
-                ".jpg",  /* suffix */
-                storageDir /* directory */
+        val image = File.createTempFile(
+            imageFileName,  /* prefix */
+            ".jpg",  /* suffix */
+            storageDir /* directory */
         )
         println("error saat create image file")
 
@@ -655,26 +756,33 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        when(v?.id){
+        when (v?.id) {
             R.id.iv_datepicker_eleave -> {
                 codeCuti = strListType
-                Log.d(tags,"check value code cuti : $codeCuti")
+                Log.d(tags, "check value code cuti : $codeCuti")
 
                 Log.d(tags, "check strListType at datepicker create eleave : $strListType")
                 if (strListType.equals("CTBRN") || strListType.equals("CTGGR")
-                        || strListType.equals("CTHJI") || strListType.equals("CTURH")) {
+                    || strListType.equals("CTHJI") || strListType.equals("CTURH")
+                ) {
 
                     // range date picker
 
                     val intent = Intent(this, RangeDatePickerCreateEleave::class.java)
-                    intent.putExtra("from","create eleave")
-                    intent.putExtra("codeTipeCuti",strListType)
-                    intent.putExtra("nameTipeCuti",typeChosen)
+                    intent.putExtra("from", "create eleave")
+                    intent.putExtra("codeTipeCuti", strListType)
+                    intent.putExtra("nameTipeCuti", typeChosen)
                     startActivity(intent)
 
 
                 } else {
-                    DatePickerDialog(this, dateEleave, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show()
+                    DatePickerDialog(
+                        this,
+                        dateEleave,
+                        myCalendar.get(Calendar.YEAR),
+                        myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)
+                    ).show()
                 }
 
             }
@@ -683,13 +791,13 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
                 var name: String? = null
                 var code: String? = null
 
-                if (!spinner_jenis_konfirmasi_eleave.text.equals("")){
-                    Log.d(tags,"reset view, value spinner cuti has changed")
+                if (!spinner_jenis_konfirmasi_eleave.text.equals("")) {
+                    Log.d(tags, "reset view, value spinner cuti has changed")
                     resetView()
                 }
 
                 val spinnerDialogStatus = SpinnerDialog(
-                        this, listCode, "Select Item :", R.style.DialogAnimations_SmileWindow
+                    this, listCode, "Select Item :", R.style.DialogAnimations_SmileWindow
                 )
 
                 spinnerDialogStatus.bindOnSpinerListener { s, i ->
@@ -699,8 +807,11 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
                     spinner_jenis_konfirmasi_eleave.text = name
                     strListType = code
                     typeChosen = name
-                    Log.d(tags, "check value chosen eleave type in code variable : $code \n strListTypenya : $strListType \n " +
-                            "typeChosennya : $typeChosen")
+                    Log.d(
+                        tags,
+                        "check value chosen eleave type in code variable : $code \n strListTypenya : $strListType \n " +
+                                "typeChosennya : $typeChosen"
+                    )
 
                     setVisibleSecondLl()
                     setVisibilityTunjanganCheckbox()
@@ -719,7 +830,7 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
                 var name: String? = null
                 var code: String? = null
                 val spinnerDialogStatus = SpinnerDialog(
-                        this, listCodeCutiBesar, "Select Item :", R.style.DialogAnimations_SmileWindow
+                    this, listCodeCutiBesar, "Select Item :", R.style.DialogAnimations_SmileWindow
                 )
 
                 spinnerDialogStatus.bindOnSpinerListener { s, i ->
@@ -740,13 +851,16 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
             }
 
             R.id.btn_submit_eleave -> {
-                Log.d(tags, "check masuk ke button submit eleave \n " + "deskripsi : ${et_pc_deskripsi_eleave.text}")
+                Log.d(
+                    tags,
+                    "check masuk ke button submit eleave \n " + "deskripsi : ${et_pc_deskripsi_eleave.text}"
+                )
                 if (tv_pc_date_eleave.text.equals("") && strListTypeCutiBesar.equals(null)) {
                     Toast.makeText(this, "You have to pick a date!", Toast.LENGTH_SHORT).show()
-                } else if (et_pc_deskripsi_eleave.text == null){
+                } else if (et_pc_deskripsi_eleave.text == null) {
                     Toast.makeText(this, "Please fill the description!", Toast.LENGTH_SHORT).show()
                 } else {
-                    Log.d(tags,"masuk ke you ha")
+                    Log.d(tags, "masuk ke you ha")
                     getAllValue()
                 }
             }
@@ -757,19 +871,16 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
         }
     }
 
-    private fun intentToEleaveList () {
+    private fun intentToEleaveList() {
         val intent = Intent(this, EleaveList::class.java)
         startActivity(intent)
     }
 
-    override fun onResume() {
-        super.onResume()
-
-    }
-
     // post eleave with evidence
-    private fun submitOneEleaveWithEvidence(nik: String?, buscd: String?, jenisCuti: String?,
-                                            jenisCutiBesar: String?, deskripsi: String?, tunjangan: String, date: ArrayList<String>){
+    private fun submitOneEleaveWithEvidence(
+        nik: String?, buscd: String?, jenisCuti: String?,
+        jenisCutiBesar: String?, deskripsi: String?, tunjangan: String, date: ArrayList<String>
+    ) {
 
         val beginDate = tgl
         val endDate = "9999-12-31"
@@ -778,75 +889,88 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
         val dateToPost = date
 
         // set cuti besar value
-        var jnsCtBsr : String = ""
+        var jnsCtBsr: String = ""
         Log.d(tags, "jenis cuti besarnya : $jenisCutiBesar")
-        if (jenisCutiBesar == null){
+        if (jenisCutiBesar == null) {
 
             // WITH EVIDENCE BUKAN CUTI BESAR
-                jnsCtBsr = ""
+            jnsCtBsr = ""
             // check value
             val amountOfIndexDate = dateToPost.size
-            Log.d(tags, "check date list size w/ evidence bukan cuti besar : ${amountOfIndexDate} \n dateToPost value cuti besar : $dateToPost")
-            Log.d(tags,
-                    "check value-value : \n " +
-                            "beginDate : $beginDate \n " +
-                            "endDate : $endDate \n " +
-                            "buscd : $buscd \n " +
-                            "pernr : $nik \n " +
-                            "leavecode/jeniscuti : $jenisCuti \n" +
-                            "leaveDescription : $deskripsi \n " +
-                            "flagAllowance : $tunjangan \n " +
-                            "leaveDate : $date")
+            Log.d(
+                tags,
+                "check date list size w/ evidence bukan cuti besar : ${amountOfIndexDate} \n dateToPost value cuti besar : $dateToPost"
+            )
+            Log.d(
+                tags,
+                "check value-value : \n " +
+                        "beginDate : $beginDate \n " +
+                        "endDate : $endDate \n " +
+                        "buscd : $buscd \n " +
+                        "pernr : $nik \n " +
+                        "leavecode/jeniscuti : $jenisCuti \n" +
+                        "leaveDescription : $deskripsi \n " +
+                        "flagAllowance : $tunjangan \n " +
+                        "leaveDate : $date"
+            )
 
             // POST
             val postConfUrl = "${baseUrl}hcis/api/leave"
             Log.d(tags, "check url post eleave : $postConfUrl")
 
             AndroidNetworking.upload(postConfUrl)
-                    .addHeaders("Authorization", "Bearer $token")
-                    .addMultipartParameter("begin_date", beginDate)
-                    .addMultipartParameter("end_date", endDate)
-                    .addMultipartParameter("business_code", buscd)
-                    .addMultipartParameter("personnel_number", nik)
-                    .addMultipartParameter("leave_code", jenisCuti)
-                    .addMultipartParameter("leave_description", deskripsi)
-                    .addMultipartParameter("flag_allowance", tunjangan)
-                    .addMultipartParameter("cuti_besar_type", jnsCtBsr)
-                    .addMultipartFile("document_id", saveImage(this, img_data))
-                    .addMultipartParameter("arr_leave_date", dateToPost.toString())
-                    .addMultipartParameter("mobile_post","true")
-                    .setPriority(Priority.MEDIUM)
-                    .build()
-                    .getAsJSONObject(object : JSONObjectRequestListener {
-                        override fun onResponse(response: JSONObject?) {
-                            Log.d(tags, "response submit eleave bukan cuti besar : $response")
-                            val message = response?.getString("message")
-                            try {
+                .addHeaders("Authorization", "Bearer $token")
+                .addMultipartParameter("begin_date", beginDate)
+                .addMultipartParameter("end_date", endDate)
+                .addMultipartParameter("business_code", buscd)
+                .addMultipartParameter("personnel_number", nik)
+                .addMultipartParameter("leave_code", jenisCuti)
+                .addMultipartParameter("leave_description", deskripsi)
+                .addMultipartParameter("flag_allowance", tunjangan)
+                .addMultipartParameter("cuti_besar_type", jnsCtBsr)
+                .addMultipartFile("document_id", saveImage(this, img_data))
+                .addMultipartParameter("arr_leave_date", dateToPost.toString())
+                .addMultipartParameter("mobile_post", "true")
+                .setPriority(Priority.MEDIUM)
+                .build()
+                .getAsJSONObject(object : JSONObjectRequestListener {
+                    override fun onResponse(response: JSONObject?) {
+                        Log.d(tags, "response submit eleave bukan cuti besar : $response")
+                        val message = response?.getString("message")
+                        try {
 
-                                if (response?.getInt("status") == 200) {
-                                    Toast.makeText(this@CreateEleave, "$message", Toast.LENGTH_SHORT).show()
-                                    finish()
+                            if (response?.getInt("status") == 200) {
+                                Toast.makeText(this@CreateEleave, "$message", Toast.LENGTH_SHORT)
+                                    .show()
+                                finish()
 //                                intentToEleaveList()
-                                } else {
-                                    Toast.makeText(this@CreateEleave, "$message", Toast.LENGTH_SHORT).show()
-                                }
-
-                            } catch (e: Exception) {
-                                Log.d(tags, "catch di post create eleave bukan cuti besar : ${e.printStackTrace()}")
+                            } else {
+                                Toast.makeText(this@CreateEleave, "$message", Toast.LENGTH_SHORT)
+                                    .show()
                             }
+
+                        } catch (e: Exception) {
+                            Log.d(
+                                tags,
+                                "catch di post create eleave bukan cuti besar : ${e.printStackTrace()}"
+                            )
                         }
+                    }
 
-                        override fun onError(anError: ANError?) {
+                    override fun onError(anError: ANError?) {
 
-                            var errorMessage = anError?.errorBody.toString()
-                            Log.d(tags, "check value error message create eleave w evidence bukan cuti besar : $errorMessage")
+                        var errorMessage = anError?.errorBody.toString()
+                        Log.d(
+                            tags,
+                            "check value error message create eleave w evidence bukan cuti besar : $errorMessage"
+                        )
 
-                            val objOnerror = JSONObject(errorMessage)
-                            val error = objOnerror.getString("message")
-                            Toast.makeText(this@CreateEleave, error, Toast.LENGTH_SHORT).show()
+                        val objOnerror = JSONObject(errorMessage)
+                        val error = objOnerror.getString("message")
+                        Toast.makeText(this@CreateEleave, error, Toast.LENGTH_SHORT).show()
 
-                        }
-                    })
+                    }
+                })
             // WITH EVIDENCE BUKAN CUTI BESAR
 
         } else {
@@ -855,73 +979,89 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
             jnsCtBsr = jenisCutiBesar
 
             // check value
-            Log.d(tags,
-                    "check value-value : \n " +
-                            "beginDate : $beginDate \n " +
-                            "endDate : $endDate \n " +
-                            "buscd : $buscd \n " +
-                            "pernr : $nik \n " +
-                            "leavecode/jeniscuti : $jenisCuti \n" +
-                            "jenis cuti besar : $jnsCtBsr \n " +
-                            "leaveDescription : $deskripsi \n " +
-                            "flagAllowance : $tunjangan \n " +
-                            "leaveDate : $date")
+            Log.d(
+                tags,
+                "check value-value : \n " +
+                        "beginDate : $beginDate \n " +
+                        "endDate : $endDate \n " +
+                        "buscd : $buscd \n " +
+                        "pernr : $nik \n " +
+                        "leavecode/jeniscuti : $jenisCuti \n" +
+                        "jenis cuti besar : $jnsCtBsr \n " +
+                        "leaveDescription : $deskripsi \n " +
+                        "flagAllowance : $tunjangan \n " +
+                        "leaveDate : $date"
+            )
 
             // POST
             val postConfUrl = "${baseUrl}hcis/api/leave"
             Log.d(tags, "check url post eleave : $postConfUrl")
 
             AndroidNetworking.upload(postConfUrl)
-                    .addHeaders("Authorization", "Bearer $token")
-                    .addMultipartParameter("begin_date", beginDate)
-                    .addMultipartParameter("end_date", endDate)
-                    .addMultipartParameter("business_code", buscd)
-                    .addMultipartParameter("personnel_number", nik)
-                    .addMultipartParameter("leave_code", jenisCuti)
-                    .addMultipartParameter("leave_description", deskripsi)
-                    .addMultipartParameter("flag_allowance", tunjangan)
-                    .addMultipartParameter("cuti_besar_type", jnsCtBsr)
-                    .addMultipartFile("document_id", saveImage(this, img_data))
-                    .addMultipartParameter("mobile_post","true")
-                    .setPriority(Priority.MEDIUM)
-                    .build()
-                    .getAsJSONObject(object : JSONObjectRequestListener {
-                        override fun onResponse(response: JSONObject?) {
-                            Log.d(tags, "response submit eleave cuti besar : $response")
-                            val message = response?.getString("message")
-                            try {
+                .addHeaders("Authorization", "Bearer $token")
+                .addMultipartParameter("begin_date", beginDate)
+                .addMultipartParameter("end_date", endDate)
+                .addMultipartParameter("business_code", buscd)
+                .addMultipartParameter("personnel_number", nik)
+                .addMultipartParameter("leave_code", jenisCuti)
+                .addMultipartParameter("leave_description", deskripsi)
+                .addMultipartParameter("flag_allowance", tunjangan)
+                .addMultipartParameter("cuti_besar_type", jnsCtBsr)
+                .addMultipartFile("document_id", saveImage(this, img_data))
+                .addMultipartParameter("mobile_post", "true")
+                .setPriority(Priority.MEDIUM)
+                .build()
+                .getAsJSONObject(object : JSONObjectRequestListener {
+                    override fun onResponse(response: JSONObject?) {
+                        Log.d(tags, "response submit eleave cuti besar : $response")
+                        val message = response?.getString("message")
+                        try {
 
-                                if (response?.getInt("status") == 200) {
-                                    Toast.makeText(this@CreateEleave, "$message", Toast.LENGTH_SHORT).show()
-                                    finish()
+                            if (response?.getInt("status") == 200) {
+                                Toast.makeText(this@CreateEleave, "$message", Toast.LENGTH_SHORT)
+                                    .show()
+                                finish()
 //                                intentToEleaveList()
-                                } else {
-                                    Toast.makeText(this@CreateEleave, "$message", Toast.LENGTH_SHORT).show()
-                                }
-
-                            } catch (e: Exception) {
-                                Log.d(tags, "catch di post create eleave cuti besar : ${e.printStackTrace()}")
+                            } else {
+                                Toast.makeText(this@CreateEleave, "$message", Toast.LENGTH_SHORT)
+                                    .show()
                             }
+
+                        } catch (e: Exception) {
+                            Log.d(
+                                tags,
+                                "catch di post create eleave cuti besar : ${e.printStackTrace()}"
+                            )
                         }
+                    }
 
-                        override fun onError(anError: ANError?) {
+                    override fun onError(anError: ANError?) {
 
-                            val errorBody = anError?.errorBody.toString()
-                            Log.d(tags, "check value error message create eleave w evidence cuti besar : $errorBody")
+                        val errorBody = anError?.errorBody.toString()
+                        Log.d(
+                            tags,
+                            "check value error message create eleave w evidence cuti besar : $errorBody"
+                        )
 
-                            val errorObject = JSONObject(errorBody)
-                            Toast.makeText(this@CreateEleave, errorObject.getString("message"), Toast.LENGTH_SHORT).show()
+                        val errorObject = JSONObject(errorBody)
+                        Toast.makeText(
+                            this@CreateEleave,
+                            errorObject.getString("message"),
+                            Toast.LENGTH_SHORT
+                        ).show()
 
 
-                        }
-                    })
+                    }
+                })
         }
         // WITH EVIDENCE CUTI BESAR
     }
 
     // post eleave without evidence
-    private fun submitOneEleaveWithoutEvidence(nik: String?, buscd: String?, jenisCuti: String?,
-                                            jenisCutiBesar: String?, deskripsi: String?, tunjangan: String, date: ArrayList<String>){
+    private fun submitOneEleaveWithoutEvidence(
+        nik: String?, buscd: String?, jenisCuti: String?,
+        jenisCutiBesar: String?, deskripsi: String?, tunjangan: String, date: ArrayList<String>
+    ) {
 
         val beginDate = tgl
         val endDate = "9999-12-31"
@@ -930,130 +1070,146 @@ class CreateEleave : AppCompatActivity(),View.OnClickListener {
         val dateToPost = date
 
         // set cuti besar value
-        var jnsCtBsr : String = ""
+        var jnsCtBsr: String = ""
         Log.d(tags, "jenis cuti besarnya w/o evidence : $jenisCutiBesar")
-        if (jenisCutiBesar == null){
+        if (jenisCutiBesar == null) {
 
             // MASUK KE BUKAN CUTI BESAR
-                jnsCtBsr = ""
+            jnsCtBsr = ""
             // check value
             val amountOfIndexDate = dateToPost.size
-            Log.d(tags, "check date list size w/o evidence bukan cuti besar : ${amountOfIndexDate} \n dateToPost value cuti besar : $dateToPost")
-            Log.d(tags,
-                    "check value-value w/o evidence bukan cuti besar : \n " +
-                            "beginDate : $beginDate \n " +
-                            "endDate : $endDate \n " +
-                            "buscd : $buscd \n " +
-                            "pernr : $nik \n " +
-                            "leavecode/jeniscuti : $jenisCuti \n" +
-                            "leaveDescription : $deskripsi \n " +
-                            "flagAllowance : $tunjangan \n ")
+            Log.d(
+                tags,
+                "check date list size w/o evidence bukan cuti besar : ${amountOfIndexDate} \n dateToPost value cuti besar : $dateToPost"
+            )
+            Log.d(
+                tags,
+                "check value-value w/o evidence bukan cuti besar : \n " +
+                        "beginDate : $beginDate \n " +
+                        "endDate : $endDate \n " +
+                        "buscd : $buscd \n " +
+                        "pernr : $nik \n " +
+                        "leavecode/jeniscuti : $jenisCuti \n" +
+                        "leaveDescription : $deskripsi \n " +
+                        "flagAllowance : $tunjangan \n "
+            )
 
             // POST
             val postConfUrl = "${baseUrl}hcis/api/leave"
             Log.d(tags, "check url post eleave w/o evidence bukan cuti besar : $postConfUrl")
 
             AndroidNetworking.upload(postConfUrl)
-                    .addHeaders("Authorization", "Bearer $token")
-                    .addMultipartParameter("begin_date", beginDate)
-                    .addMultipartParameter("end_date", endDate)
-                    .addMultipartParameter("business_code", buscd)
-                    .addMultipartParameter("personnel_number", nik)
-                    .addMultipartParameter("leave_code", jenisCuti)
-                    .addMultipartParameter("leave_description", deskripsi)
-                    .addMultipartParameter("flag_allowance", tunjangan)
-                    .addMultipartParameter("cuti_besar_type", jnsCtBsr)
-                    .addMultipartParameter("arr_leave_date", dateToPost.toString())
-                    .addMultipartParameter("mobile_post","true")
-                    .setPriority(Priority.MEDIUM)
-                    .build()
-                    .getAsJSONObject(object : JSONObjectRequestListener {
-                        override fun onResponse(response: JSONObject?) {
-                            Log.d(tags, "response submit eleave w/o evidence bukan cuti besar : $response")
-                            val message = response?.getString("message")
+                .addHeaders("Authorization", "Bearer $token")
+                .addMultipartParameter("begin_date", beginDate)
+                .addMultipartParameter("end_date", endDate)
+                .addMultipartParameter("business_code", buscd)
+                .addMultipartParameter("personnel_number", nik)
+                .addMultipartParameter("leave_code", jenisCuti)
+                .addMultipartParameter("leave_description", deskripsi)
+                .addMultipartParameter("flag_allowance", tunjangan)
+                .addMultipartParameter("cuti_besar_type", jnsCtBsr)
+                .addMultipartParameter("arr_leave_date", dateToPost.toString())
+                .addMultipartParameter("mobile_post", "true")
+                .setPriority(Priority.MEDIUM)
+                .build()
+                .getAsJSONObject(object : JSONObjectRequestListener {
+                    override fun onResponse(response: JSONObject?) {
+                        Log.d(
+                            tags,
+                            "response submit eleave w/o evidence bukan cuti besar : $response"
+                        )
+                        val message = response?.getString("message")
 
-                            if (response?.getInt("status") == 200) {
-                                Toast.makeText(this@CreateEleave, "$message", Toast.LENGTH_SHORT).show()
-                                finish()
+                        if (response?.getInt("status") == 200) {
+                            Toast.makeText(this@CreateEleave, "$message", Toast.LENGTH_SHORT).show()
+                            finish()
 //                                intentToEleaveList()
-                            } else {
-                                Toast.makeText(this@CreateEleave, "$message", Toast.LENGTH_SHORT).show()
-
-                            }
-                        }
-
-                        override fun onError(anError: ANError?) {
-
-                            var errorMessage = anError?.errorBody.toString()
-                            Log.d(tags, "check value error message create eleave w/o evidence bukan cuti besar : $errorMessage ")
-
-                            val objOnerror = JSONObject(errorMessage)
-                            val error = objOnerror.getString("message")
-                            Toast.makeText(this@CreateEleave, error, Toast.LENGTH_SHORT).show()
+                        } else {
+                            Toast.makeText(this@CreateEleave, "$message", Toast.LENGTH_SHORT).show()
 
                         }
-                    })
-        // MASUK KE BUKAN CUTI BESAR
+                    }
+
+                    override fun onError(anError: ANError?) {
+
+                        var errorMessage = anError?.errorBody.toString()
+                        Log.d(
+                            tags,
+                            "check value error message create eleave w/o evidence bukan cuti besar : $errorMessage "
+                        )
+
+                        val objOnerror = JSONObject(errorMessage)
+                        val error = objOnerror.getString("message")
+                        Toast.makeText(this@CreateEleave, error, Toast.LENGTH_SHORT).show()
+
+                    }
+                })
+            // MASUK KE BUKAN CUTI BESAR
 
         } else {
             // MASUK KE JENIS CUTI BESAR
             jnsCtBsr = jenisCutiBesar
 
-            Log.d(tags,
-                    "check value-value w/o evidence cuti besar : \n " +
-                            "beginDate : $beginDate \n " +
-                            "endDate : $endDate \n " +
-                            "buscd : $buscd \n " +
-                            "pernr : $nik \n " +
-                            "leavecode/jeniscuti : $jenisCuti \n" +
-                            "jenis cuti besar : $jnsCtBsr \n " +
-                            "leaveDescription : $deskripsi \n " +
-                            "flagAllowance : $tunjangan \n " +
-                            "leaveDate : $date")
+            Log.d(
+                tags,
+                "check value-value w/o evidence cuti besar : \n " +
+                        "beginDate : $beginDate \n " +
+                        "endDate : $endDate \n " +
+                        "buscd : $buscd \n " +
+                        "pernr : $nik \n " +
+                        "leavecode/jeniscuti : $jenisCuti \n" +
+                        "jenis cuti besar : $jnsCtBsr \n " +
+                        "leaveDescription : $deskripsi \n " +
+                        "flagAllowance : $tunjangan \n " +
+                        "leaveDate : $date"
+            )
 
             // POST
             val postConfUrl = "${baseUrl}hcis/api/leave"
             Log.d(tags, "check url post eleave w/o evidence cuti besar : $postConfUrl")
 
             AndroidNetworking.upload(postConfUrl)
-                    .addHeaders("Authorization", "Bearer $token")
-                    .addMultipartParameter("begin_date", beginDate)
-                    .addMultipartParameter("end_date", endDate)
-                    .addMultipartParameter("business_code", buscd)
-                    .addMultipartParameter("personnel_number", nik)
-                    .addMultipartParameter("leave_code", jenisCuti)
-                    .addMultipartParameter("leave_description", deskripsi)
-                    .addMultipartParameter("flag_allowance", tunjangan)
-                    .addMultipartParameter("cuti_besar_type", jnsCtBsr)
-                    .addMultipartParameter("mobile_post","true")
-                    .setPriority(Priority.MEDIUM)
-                    .build()
-                    .getAsJSONObject(object : JSONObjectRequestListener {
-                        override fun onResponse(response: JSONObject?) {
-                            Log.d(tags, "response submit eleave w/o evidence cuti besar : $response")
-                            val message = response?.getString("message")
+                .addHeaders("Authorization", "Bearer $token")
+                .addMultipartParameter("begin_date", beginDate)
+                .addMultipartParameter("end_date", endDate)
+                .addMultipartParameter("business_code", buscd)
+                .addMultipartParameter("personnel_number", nik)
+                .addMultipartParameter("leave_code", jenisCuti)
+                .addMultipartParameter("leave_description", deskripsi)
+                .addMultipartParameter("flag_allowance", tunjangan)
+                .addMultipartParameter("cuti_besar_type", jnsCtBsr)
+                .addMultipartParameter("mobile_post", "true")
+                .setPriority(Priority.MEDIUM)
+                .build()
+                .getAsJSONObject(object : JSONObjectRequestListener {
+                    override fun onResponse(response: JSONObject?) {
+                        Log.d(tags, "response submit eleave w/o evidence cuti besar : $response")
+                        val message = response?.getString("message")
 
-                            if (response?.getInt("status") == 200) {
-                                Toast.makeText(this@CreateEleave, "$message", Toast.LENGTH_SHORT).show()
-                                finish()
+                        if (response?.getInt("status") == 200) {
+                            Toast.makeText(this@CreateEleave, "$message", Toast.LENGTH_SHORT).show()
+                            finish()
 //                                intentToEleaveList()
-                            } else {
-                                Toast.makeText(this@CreateEleave, "$message", Toast.LENGTH_SHORT).show()
-
-                            }
+                        } else {
+                            Toast.makeText(this@CreateEleave, "$message", Toast.LENGTH_SHORT).show()
 
                         }
 
-                        override fun onError(anError: ANError?) {
+                    }
 
-                            var errorMessage = anError?.errorBody.toString()
-                            Log.d(tags, "check value error message create eleave w/o evidence cuti besar : $errorMessage ")
+                    override fun onError(anError: ANError?) {
 
-                            val objOnerror = JSONObject(errorMessage)
-                            val error = objOnerror.getString("message")
-                            Toast.makeText(this@CreateEleave, error, Toast.LENGTH_SHORT).show()
-                        }
-                    })
+                        var errorMessage = anError?.errorBody.toString()
+                        Log.d(
+                            tags,
+                            "check value error message create eleave w/o evidence cuti besar : $errorMessage "
+                        )
+
+                        val objOnerror = JSONObject(errorMessage)
+                        val error = objOnerror.getString("message")
+                        Toast.makeText(this@CreateEleave, error, Toast.LENGTH_SHORT).show()
+                    }
+                })
         }
         // MASUK KE JENIS CUTI BESAR
     }

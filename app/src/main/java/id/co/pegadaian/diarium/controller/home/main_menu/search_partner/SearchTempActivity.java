@@ -74,7 +74,10 @@ public class SearchTempActivity extends AppCompatActivity {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_SEARCH)) {
-                    getPartner(mEditText.getText().toString());
+//                    String result = mEditText.getText().toString().replace(" ", "%20");
+                    String result = mEditText.getText().toString();
+                    System.out.println("result_replace_search : " + result);
+                    getPartner(result);
                     imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
                 }
                 return false;
@@ -113,14 +116,21 @@ public class SearchTempActivity extends AppCompatActivity {
         return true;
     }
 
-    private void getPartner(String param){
+    private void getPartner(String param) {
         progressDialogHelper.showProgressDialog(SearchTempActivity.this, "Getting data...");
-        System.out.println("AUSTRALIAGETPARTNER" + session.getServerURL()+"users/search/key/"+param+"/buscd/"+session.getUserBusinessCode());
+        System.out.println("AUSTRALIAGETPARTNER" + session.getServerURL() + "users/search/key/" + param + "/buscd/" + session.getUserBusinessCode());
         System.out.println(session.getToken());
-        AndroidNetworking.get(session.getServerURL()+"users/search/key/"+param+"/buscd/"+session.getUserBusinessCode())
-                .addHeaders("Accept","application/json")
-                .addHeaders("Content-Type","application/json")
-                .addHeaders("Authorization",session.getToken())
+
+        String urlBefore = session.getServerURL() + "users/search/key/" + param + "/buscd/" + session.getUserBusinessCode();
+
+        String urlAfter = session.getServerURL() + "users/search/buscd/" + session.getUserBusinessCode();
+
+
+        AndroidNetworking.get(urlAfter)
+                .addHeaders("Accept", "application/json")
+                .addHeaders("Content-Type", "application/json")
+                .addHeaders("Authorization", session.getToken())
+                .addQueryParameter("search", param)
                 //.addJSONObjectBody(body)
                 .setPriority(Priority.MEDIUM)
                 .build()
@@ -128,9 +138,10 @@ public class SearchTempActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         // do anything with response
-                        System.out.println(response+"seradkewjekj");
+                        System.out.println("ResponseSearch : \n" +response);
+//                        System.out.println(response);
                         try {
-                            if(response.getInt("status")==200){
+                            if (response.getInt("status") == 200) {
                                 listModel = new ArrayList<SearchTempModel>();
 //                                SearchTempModel contacts = new SearchTempModel();
                                 JSONArray jsonArray = response.getJSONArray("data");
@@ -168,9 +179,9 @@ public class SearchTempActivity extends AppCompatActivity {
                                         @Override
                                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                                             Intent i = new Intent(SearchTempActivity.this, ProfileActivity.class);
-                                            i.putExtra("personal_number",listModel.get(position).getPersonal_number());
-                                            i.putExtra("avatar",listModel.get(position).getProfile());
-                                            i.putExtra("job",listModel.get(position).getUnit());
+                                            i.putExtra("personal_number", listModel.get(position).getPersonal_number());
+                                            i.putExtra("avatar", listModel.get(position).getProfile());
+                                            i.putExtra("job", listModel.get(position).getUnit());
                                             startActivity(i);
                                         }
                                     });
@@ -180,17 +191,18 @@ public class SearchTempActivity extends AppCompatActivity {
                                 listPartner.setAdapter(adapter);
                                 progressDialogHelper.dismissProgressDialog(SearchTempActivity.this);
 
-                            }else{
+                            } else {
                                 listPartner.setVisibility(View.INVISIBLE);
                                 progressDialogHelper.dismissProgressDialog(SearchTempActivity.this);
 //                                Toast.makeText(SearchTempActivity.this, "no result for "+param, Toast.LENGTH_SHORT).show();
                             }
-                        }catch (Exception e){
+                        } catch (Exception e) {
                             progressDialogHelper.dismissProgressDialog(SearchTempActivity.this);
                             System.out.println(e);
                         }
 
                     }
+
                     @Override
                     public void onError(ANError error) {
                         System.out.println(error);

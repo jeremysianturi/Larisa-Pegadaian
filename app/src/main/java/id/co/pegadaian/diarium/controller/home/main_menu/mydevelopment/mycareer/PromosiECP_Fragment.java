@@ -23,7 +23,7 @@ import java.util.List;
 import id.co.pegadaian.diarium.R;
 import id.co.pegadaian.diarium.adapter.Adapter_ecp_promosi;
 import id.co.pegadaian.diarium.model.PromosiEcpModel;
-import id.co.pegadaian.diarium.util.ServiceGeneratorCollege;
+//import id.co.pegadaian.diarium.util.ServiceGeneratorCollege;
 import id.co.pegadaian.diarium.util.UserSessionManager;
 import id.co.pegadaian.diarium.util.element.ProgressDialogHelper;
 
@@ -35,7 +35,7 @@ public class PromosiECP_Fragment extends Fragment {
   private UserSessionManager session;
   private ListView listpromosi;
   private Adapter_ecp_promosi adapter;
-  private ServiceGeneratorCollege serviceGeneratorCollege;
+//  private ServiceGeneratorCollege serviceGeneratorCollege;
 
 
   public PromosiECP_Fragment() {
